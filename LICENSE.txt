@@ -1,0 +1,21 @@
+# Custom License
+
+© 2025 Zaki Malla
+
+## Permission
+
+Permission is hereby granted, free of charge, to any person obtaining written permission from the copyright holder, to use, copy, modify and distribute this software (the “Software”) **strictly in accordance with such written permission**.
+
+Unauthorized use, distribution, modification, or sale of the Software without explicit written permission from the copyright holder is strictly prohibited and will constitute an infringement.
+
+---
+
+## Disclaimer of Warranty
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  
+- MERCHANTABILITY  
+- FITNESS FOR A PARTICULAR PURPOSE  
+- NONINFRINGEMENT  
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY DAMAGES, WHETHER DIRECT, INDIRECT, INCIDENTAL OR CONSEQUENTIAL, ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE.
+
