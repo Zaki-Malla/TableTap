@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TableTap.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TableTap.Models
 {
@@ -23,6 +24,10 @@ namespace TableTap.Models
         public virtual DbSet<EstablishmentModel> TbEstablishment { get; set; }
         public virtual DbSet<SubscriptionModel> TbSubscription { get; set; }
         public virtual DbSet<SubscriptionPlanModel> TbSubscriptionPlan { get; set; }
+        public virtual DbSet<MenuModel> TbMenus { get; set; }
+        public virtual DbSet<CategoryModel> TbCategories { get; set; }
+        public virtual DbSet<MenuItemModel> TbMenuItems { get; set; }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -67,6 +72,29 @@ namespace TableTap.Models
                 .HasMany(p => p.Subscriptions)              
                 .WithOne(s => s.Plan)                       
                 .HasForeignKey(s => s.PlanId);
+
+            // 5. EstablishmentModel → MenuModel (One-to-Many)
+            modelBuilder.Entity<EstablishmentModel>()
+                .HasMany(e => e.Menus)
+                .WithOne(m => m.Establishment)
+                .HasForeignKey(m => m.EstablishmentId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            //6. MenuModel → CategoryModel (One-to-Many)
+            modelBuilder.Entity<MenuModel>()
+                .HasMany(m => m.Categories)
+                .WithOne(c => c.Menu)
+                .HasForeignKey(c => c.MenuId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            //7. CategoryModel → MenuItemModel (One-to-Many)
+            modelBuilder.Entity<CategoryModel>()
+                .HasMany(c => c.MenuItems)
+                .WithOne(mi => mi.Category)
+                .HasForeignKey(mi => mi.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
         }
 
     }
