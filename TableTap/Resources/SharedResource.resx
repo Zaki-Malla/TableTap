@@ -117,7 +117,163 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="test" xml:space="preserve">
-    <value>test</value>
+  <data name="Hero_Subtitle" xml:space="preserve">
+    <value>A sleek digital solution for present your menu online in an eco-friendly and efficient way</value>
+  </data>
+  <data name="Hero_Title" xml:space="preserve">
+    <value>Digitize your establishment menu now with TableTap</value>
+  </data>
+  <data name="Nav_Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Nav_FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Nav_Features" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="GetStarted" xml:space="preserve">
+    <value>Get Started</value>
+  </data>
+  <data name="Nav_HowItWorks" xml:space="preserve">
+    <value>How It Works</value>
+  </data>
+  <data name="Nav_Stats" xml:space="preserve">
+    <value>Stats</value>
+  </data>
+  <data name="Feature_EasyAccess_Title" xml:space="preserve">
+    <value>Easy Access</value>
+  </data>
+  <data name="Feature_EasyAccess_Desc" xml:space="preserve">
+    <value>Customers can access the menu via QR code easily without downloading an app.</value>
+  </data>
+  <data name="Feature_EcoFriendly_Title" xml:space="preserve">
+    <value>Eco-Friendly</value>
+  </data>
+  <data name="Feature_EcoFriendly_Desc" xml:space="preserve">
+    <value>Reduce paper use and contribute to your restaurant’s environmental sustainability.</value>
+  </data>
+  <data name="Feature_CostSaving_Title" xml:space="preserve">
+    <value>Cost Saving</value>
+  </data>
+  <data name="Feature_CostSaving_Desc" xml:space="preserve">
+    <value>Say goodbye to repeated printing — save ongoing menu costs for your restaurant.</value>
+  </data>
+  <data name="customize" xml:space="preserve">
+    <value>Customize</value>
+  </data>
+  <data name="resetToDefault" xml:space="preserve">
+    <value>Reset to Default</value>
+  </data>
+  <data name="themeCustomizer" xml:space="preserve">
+    <value>Theme Customizer</value>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="exploreStyles" xml:space="preserve">
+    <value>Explore Styles</value>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="colorScheme" xml:space="preserve">
+    <value>Color Scheme</value>
+  </data>
+  <data name="whyChoose" xml:space="preserve">
+    <value> Why Choose TableTap? </value>
+  </data>
+  <data name="establishmentDigitalFuture" xml:space="preserve">
+    <value>🌍 Jump into your establishment's digital future.</value>
+  </data>
+  <data name="easyFast" xml:space="preserve">
+    <value>🚀 Easy, fast, and sustainable.</value>
+  </data>
+  <data name="secureWithoutApp" xml:space="preserve">
+    <value>🔒 Secure and without the need for any app.</value>
+  </data>
+  <data name="TableTapFeatures" xml:space="preserve">
+    <value>Features of TableTap</value>
+  </data>
+  <data name="EaseAccess" xml:space="preserve">
+    <value>Ease of access</value>
+  </data>
+  <data name="customersAccessQR" xml:space="preserve">
+    <value>Customers can access the menu via QR code easily without downloading an app.</value>
+  </data>
+  <data name="environmentalProtection" xml:space="preserve">
+    <value>Environmental protection</value>
+  </data>
+  <data name="reducePaperUsage" xml:space="preserve">
+    <value>Reduce paper usage and contribute to the environmental sustainability of your establishment.</value>
+  </data>
+  <data name="costSavings" xml:space="preserve">
+    <value>Cost savings</value>
+  </data>
+  <data name="sayGoodbye" xml:space="preserve">
+    <value>Say goodbye to repetitive printing and save your establishment the periodic costs of lists.</value>
+  </data>
+  <data name="howTableTapWork" xml:space="preserve">
+    <value>How does TableTap work?</value>
+  </data>
+  <data name="registration" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="registerYourEstablishment" xml:space="preserve">
+    <value>Register your establishment on the platform and start adding your listing easily.</value>
+  </data>
+  <data name="createQR" xml:space="preserve">
+    <value>Create a QR Code</value>
+  </data>
+  <data name="getQR" xml:space="preserve">
+    <value>Get a QR code for your establishment that you can print and place on tables or display on screens.</value>
+  </data>
+  <data name="accessToMenu" xml:space="preserve">
+    <value>Access to the menu</value>
+  </data>
+  <data name="customersUsePhones" xml:space="preserve">
+    <value>Customers use their phones to scan the code and access the digital menu instantly.</value>
+  </data>
+  <data name="tableTapNumbers" xml:space="preserve">
+    <value>TableTap numbers</value>
+  </data>
+  <data name="registeredEstablishment" xml:space="preserve">
+    <value>Registered establishment</value>
+  </data>
+  <data name="monthlyVisit" xml:space="preserve">
+    <value>Monthly visit to the lists</value>
+  </data>
+  <data name="customerSatisfaction" xml:space="preserve">
+    <value>Customer satisfaction</value>
+  </data>
+  <data name="tableTapFree" xml:space="preserve">
+    <value>Is TableTap free?</value>
+  </data>
+  <data name="basicServiceAtSmallPrice" xml:space="preserve">
+    <value>Basic service at a small price with more expensive options for more customizations.</value>
+  </data>
+  <data name="homePage" xml:space="preserve">
+    <value>Home page</value>
+  </data>
+  <data name="specialApp" xml:space="preserve">
+    <value>Do I need a special app?</value>
+  </data>
+  <data name="clientUseBrowser" xml:space="preserve">
+    <value>No, the client can only use the browser to access the menu.</value>
+  </data>
+  <data name="easilyCustomized" xml:space="preserve">
+    <value>Can the menu be easily customized?</value>
+  </data>
+  <data name="youCanEdit" xml:space="preserve">
+    <value>Yes, you can edit and add items whenever you want via the Dashboard.</value>
+  </data>
+  <data name="contactUs" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="emailUs" xml:space="preserve">
+    <value>Email us:</value>
   </data>
 </root>

@@ -1,101 +1,279 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
-		Microsoft ResX Schema
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-		Version 1.3
-
-		The primary goals of this format is to allow a simple XML format 
-		that is mostly human readable. The generation and parsing of the 
-		various data types are done through the TypeConverter classes 
-		associated with the data types.
-
-		Example:
-
-		... ado.net/XML headers & schema ...
-		<resheader name="resmimetype">text/microsoft-resx</resheader>
-		<resheader name="version">1.3</resheader>
-		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-		<data name="Name1">this is my long string</data>
-		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-			[base64 mime encoded serialized .NET Framework object]
-		</data>
-		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-			[base64 mime encoded string representing a byte array form of the .NET Framework object]
-		</data>
-
-		There are any number of "resheader" rows that contain simple 
-		name/value pairs.
-
-		Each data row contains a name, and value. The row also contains a 
-		type or mimetype. Type corresponds to a .NET class that support 
-		text/value conversion through the TypeConverter architecture. 
-		Classes that don't support this are serialized and stored with the 
-		mimetype set.
-
-		The mimetype is used for serialized objects, and tells the 
-		ResXResourceReader how to depersist the object. This is currently not 
-		extensible. For a given mimetype the value must be set accordingly:
-
-		Note - application/x-microsoft.net.object.binary.base64 is the format 
-		that the ResXResourceWriter will generate, however the reader can 
-		read any of the formats listed below.
-
-		mimetype: application/x-microsoft.net.object.binary.base64
-		value   : The object must be serialized with 
-			: System.Serialization.Formatters.Binary.BinaryFormatter
-			: and then encoded with base64 encoding.
-
-		mimetype: application/x-microsoft.net.object.soap.base64
-		value   : The object must be serialized with 
-			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-			: and then encoded with base64 encoding.
-
-		mimetype: application/x-microsoft.net.object.bytearray.base64
-		value   : The object must be serialized into a byte array 
-			: using a System.ComponentModel.TypeConverter
-			: and then encoded with base64 encoding.
-	-->
-	
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Hero_Subtitle" xml:space="preserve">
+    <value>حل رقمي أنيق لعرض قائمة الطعام أونلاين بطريقة صديقة للبيئة وفعالة</value>
+  </data>
+  <data name="Hero_Title" xml:space="preserve">
+    <value>قم برقمنة قوائم منشأتك الآن مع TableTap</value>
+  </data>
+  <data name="Nav_Contact" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="Nav_FAQ" xml:space="preserve">
+    <value>الأسئلة الشائعة</value>
+  </data>
+  <data name="Nav_Features" xml:space="preserve">
+    <value>المميزات</value>
+  </data>
+  <data name="GetStarted" xml:space="preserve">
+    <value>ابدأ الآن</value>
+  </data>
+  <data name="Nav_HowItWorks" xml:space="preserve">
+    <value>كيف يعمل</value>
+  </data>
+  <data name="Nav_Stats" xml:space="preserve">
+    <value>الأرقام</value>
+  </data>
+  <data name="Feature_EasyAccess_Title" xml:space="preserve">
+    <value>سهولة الوصول</value>
+  </data>
+  <data name="Feature_EasyAccess_Desc" xml:space="preserve">
+    <value>يمكن للعملاء الوصول إلى القائمة عبر رمز QR بكل سهولة دون تنزيل تطبيق.</value>
+  </data>
+  <data name="Feature_EcoFriendly_Title" xml:space="preserve">
+    <value>حماية البيئة</value>
+  </data>
+  <data name="Feature_EcoFriendly_Desc" xml:space="preserve">
+    <value>تقليل استخدام الورق والمساهمة في الاستدامة البيئية لمطعمك.</value>
+  </data>
+  <data name="Feature_CostSaving_Title" xml:space="preserve">
+    <value>توفير التكاليف</value>
+  </data>
+  <data name="Feature_CostSaving_Desc" xml:space="preserve">
+    <value>وداعًا للطباعة المتكررة، وفر على مطعمك التكاليف الدورية لقوائم الطعام.</value>
+  </data>
+  <data name="customize" xml:space="preserve">
+    <value>تخصيص</value>
+  </data>
+  <data name="resetToDefault" xml:space="preserve">
+    <value>إعادة الضبط إلى الوضع الافتراضي</value>
+  </data>
+  <data name="themeCustomizer" xml:space="preserve">
+    <value>تخصيص الثيم</value>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>الضوء</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="exploreStyles" xml:space="preserve">
+    <value>استكشاف الأنماط</value>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>داكن</value>
+  </data>
+  <data name="colorScheme" xml:space="preserve">
+    <value>سمة اللون</value>
+  </data>
+  <data name="whyChoose" xml:space="preserve">
+    <value> لماذا تختار TableTap؟ </value>
+  </data>
+  <data name="establishmentDigitalFuture" xml:space="preserve">
+    <value>🌍 انطلق نحو المستقبل الرقمي لمنشأتك.</value>
+  </data>
+  <data name="easyFast" xml:space="preserve">
+    <value>🚀 سهولة، سرعة، واستدامة.</value>
+  </data>
+  <data name="secureWithoutApp" xml:space="preserve">
+    <value>🔒 آمن وبدون الحاجة لأي تطبيق.</value>
+  </data>
+  <data name="TableTapFeatures" xml:space="preserve">
+    <value>مميزات TableTap</value>
+  </data>
+  <data name="EaseAccess" xml:space="preserve">
+    <value>سهولة الوصول</value>
+  </data>
+  <data name="customersAccessQR" xml:space="preserve">
+    <value>يمكن للعملاء الوصول إلى القائمة عبر رمز QR بكل سهولة دون تنزيل تطبيق.</value>
+  </data>
+  <data name="environmentalProtection" xml:space="preserve">
+    <value>حماية البيئة</value>
+  </data>
+  <data name="reducePaperUsage" xml:space="preserve">
+    <value>تقليل استخدام الورق والمساهمة في الاستدامة البيئية لمنشأتك.</value>
+  </data>
+  <data name="costSavings" xml:space="preserve">
+    <value>توفير التكاليف</value>
+  </data>
+  <data name="sayGoodbye" xml:space="preserve">
+    <value>وداعًا للطباعة المتكررة، وفر على منشأتك التكاليف الدورية للقوائم.</value>
+  </data>
+  <data name="howTableTapWork" xml:space="preserve">
+    <value>كيف يعمل TableTap؟</value>
+  </data>
+  <data name="registration" xml:space="preserve">
+    <value>التسجيل</value>
+  </data>
+  <data name="registerYourEstablishment" xml:space="preserve">
+    <value>سجل منشأتك على المنصة وابدأ بإضافة قائمتك بسهولة.</value>
+  </data>
+  <data name="createQR" xml:space="preserve">
+    <value>إنشاء رمز QR</value>
+  </data>
+  <data name="getQR" xml:space="preserve">
+    <value>احصل على رمز QR خاص بمنشأتك يمكنك طباعته ووضعه على الطاولات او عرضه على الشاشات.</value>
+  </data>
+  <data name="accessToMenu" xml:space="preserve">
+    <value>الوصول للقائمة</value>
+  </data>
+  <data name="customersUsePhones" xml:space="preserve">
+    <value>يستخدم العملاء هواتفهم لمسح الرمز والوصول إلى القائمة الرقمية فورًا.</value>
+  </data>
+  <data name="tableTapNumbers" xml:space="preserve">
+    <value>أرقام TableTap</value>
+  </data>
+  <data name="registeredEstablishment" xml:space="preserve">
+    <value>منشأة مسجلة</value>
+  </data>
+  <data name="monthlyVisit" xml:space="preserve">
+    <value>زيارة شهرية للقوائم</value>
+  </data>
+  <data name="customerSatisfaction" xml:space="preserve">
+    <value>رضا العملاء</value>
+  </data>
+  <data name="tableTapFree" xml:space="preserve">
+    <value>هل TableTap مجاني؟</value>
+  </data>
+  <data name="basicServiceAtSmallPrice" xml:space="preserve">
+    <value>الخدمة الأساسية بسعر رمزي مع خيارات أغلى للمزيد من التخصيصات.</value>
+  </data>
+  <data name="homePage" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="specialApp" xml:space="preserve">
+    <value>هل أحتاج لتطبيق خاص؟</value>
+  </data>
+  <data name="clientUseBrowser" xml:space="preserve">
+    <value>لا، يمكن للعميل استخدام المتصفح فقط للوصول إلى القائمة.</value>
+  </data>
+  <data name="easilyCustomized" xml:space="preserve">
+    <value>هل يمكن تعديل القائمة بسهولة؟</value>
+  </data>
+  <data name="youCanEdit" xml:space="preserve">
+    <value>نعم، يمكنك تعديل وإضافة الأصناف متى شئت عبر لوحة التحكم.</value>
+  </data>
+  <data name="contactUs" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="emailUs" xml:space="preserve">
+    <value>راسلنا عبر البريد الإلكتروني:</value>
+  </data>
 </root>

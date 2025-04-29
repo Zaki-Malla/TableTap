@@ -61,11 +61,479 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to test.
+        ///   Looks up a localized string similar to Access to the menu.
         /// </summary>
-        public static string test {
+        public static string accessToMenu {
             get {
-                return ResourceManager.GetString("test", resourceCulture);
+                return ResourceManager.GetString("accessToMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basic service at a small price with more expensive options for more customizations..
+        /// </summary>
+        public static string basicServiceAtSmallPrice {
+            get {
+                return ResourceManager.GetString("basicServiceAtSmallPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No, the client can only use the browser to access the menu..
+        /// </summary>
+        public static string clientUseBrowser {
+            get {
+                return ResourceManager.GetString("clientUseBrowser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color Scheme.
+        /// </summary>
+        public static string colorScheme {
+            get {
+                return ResourceManager.GetString("colorScheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact us.
+        /// </summary>
+        public static string contactUs {
+            get {
+                return ResourceManager.GetString("contactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost savings.
+        /// </summary>
+        public static string costSavings {
+            get {
+                return ResourceManager.GetString("costSavings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create a QR Code.
+        /// </summary>
+        public static string createQR {
+            get {
+                return ResourceManager.GetString("createQR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customers can access the menu via QR code easily without downloading an app..
+        /// </summary>
+        public static string customersAccessQR {
+            get {
+                return ResourceManager.GetString("customersAccessQR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer satisfaction.
+        /// </summary>
+        public static string customerSatisfaction {
+            get {
+                return ResourceManager.GetString("customerSatisfaction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customers use their phones to scan the code and access the digital menu instantly..
+        /// </summary>
+        public static string customersUsePhones {
+            get {
+                return ResourceManager.GetString("customersUsePhones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customize.
+        /// </summary>
+        public static string customize {
+            get {
+                return ResourceManager.GetString("customize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        public static string dark {
+            get {
+                return ResourceManager.GetString("dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ease of access.
+        /// </summary>
+        public static string EaseAccess {
+            get {
+                return ResourceManager.GetString("EaseAccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can the menu be easily customized?.
+        /// </summary>
+        public static string easilyCustomized {
+            get {
+                return ResourceManager.GetString("easilyCustomized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 🚀 Easy, fast, and sustainable..
+        /// </summary>
+        public static string easyFast {
+            get {
+                return ResourceManager.GetString("easyFast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email us:.
+        /// </summary>
+        public static string emailUs {
+            get {
+                return ResourceManager.GetString("emailUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Environmental protection.
+        /// </summary>
+        public static string environmentalProtection {
+            get {
+                return ResourceManager.GetString("environmentalProtection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 🌍 Jump into your establishment&apos;s digital future..
+        /// </summary>
+        public static string establishmentDigitalFuture {
+            get {
+                return ResourceManager.GetString("establishmentDigitalFuture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explore Styles.
+        /// </summary>
+        public static string exploreStyles {
+            get {
+                return ResourceManager.GetString("exploreStyles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Say goodbye to repeated printing — save ongoing menu costs for your restaurant..
+        /// </summary>
+        public static string Feature_CostSaving_Desc {
+            get {
+                return ResourceManager.GetString("Feature_CostSaving_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost Saving.
+        /// </summary>
+        public static string Feature_CostSaving_Title {
+            get {
+                return ResourceManager.GetString("Feature_CostSaving_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customers can access the menu via QR code easily without downloading an app..
+        /// </summary>
+        public static string Feature_EasyAccess_Desc {
+            get {
+                return ResourceManager.GetString("Feature_EasyAccess_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Easy Access.
+        /// </summary>
+        public static string Feature_EasyAccess_Title {
+            get {
+                return ResourceManager.GetString("Feature_EasyAccess_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reduce paper use and contribute to your restaurant’s environmental sustainability..
+        /// </summary>
+        public static string Feature_EcoFriendly_Desc {
+            get {
+                return ResourceManager.GetString("Feature_EcoFriendly_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eco-Friendly.
+        /// </summary>
+        public static string Feature_EcoFriendly_Title {
+            get {
+                return ResourceManager.GetString("Feature_EcoFriendly_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get a QR code for your establishment that you can print and place on tables or display on screens..
+        /// </summary>
+        public static string getQR {
+            get {
+                return ResourceManager.GetString("getQR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get Started.
+        /// </summary>
+        public static string GetStarted {
+            get {
+                return ResourceManager.GetString("GetStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A sleek digital solution for present your menu online in an eco-friendly and efficient way.
+        /// </summary>
+        public static string Hero_Subtitle {
+            get {
+                return ResourceManager.GetString("Hero_Subtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Digitize your establishment menu now with TableTap.
+        /// </summary>
+        public static string Hero_Title {
+            get {
+                return ResourceManager.GetString("Hero_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home page.
+        /// </summary>
+        public static string homePage {
+            get {
+                return ResourceManager.GetString("homePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How does TableTap work?.
+        /// </summary>
+        public static string howTableTapWork {
+            get {
+                return ResourceManager.GetString("howTableTapWork", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string language {
+            get {
+                return ResourceManager.GetString("language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light.
+        /// </summary>
+        public static string light {
+            get {
+                return ResourceManager.GetString("light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly visit to the lists.
+        /// </summary>
+        public static string monthlyVisit {
+            get {
+                return ResourceManager.GetString("monthlyVisit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact.
+        /// </summary>
+        public static string Nav_Contact {
+            get {
+                return ResourceManager.GetString("Nav_Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FAQ.
+        /// </summary>
+        public static string Nav_FAQ {
+            get {
+                return ResourceManager.GetString("Nav_FAQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Features.
+        /// </summary>
+        public static string Nav_Features {
+            get {
+                return ResourceManager.GetString("Nav_Features", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How It Works.
+        /// </summary>
+        public static string Nav_HowItWorks {
+            get {
+                return ResourceManager.GetString("Nav_HowItWorks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stats.
+        /// </summary>
+        public static string Nav_Stats {
+            get {
+                return ResourceManager.GetString("Nav_Stats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reduce paper usage and contribute to the environmental sustainability of your establishment..
+        /// </summary>
+        public static string reducePaperUsage {
+            get {
+                return ResourceManager.GetString("reducePaperUsage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registered establishment.
+        /// </summary>
+        public static string registeredEstablishment {
+            get {
+                return ResourceManager.GetString("registeredEstablishment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register your establishment on the platform and start adding your listing easily..
+        /// </summary>
+        public static string registerYourEstablishment {
+            get {
+                return ResourceManager.GetString("registerYourEstablishment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registration.
+        /// </summary>
+        public static string registration {
+            get {
+                return ResourceManager.GetString("registration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset to Default.
+        /// </summary>
+        public static string resetToDefault {
+            get {
+                return ResourceManager.GetString("resetToDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Say goodbye to repetitive printing and save your establishment the periodic costs of lists..
+        /// </summary>
+        public static string sayGoodbye {
+            get {
+                return ResourceManager.GetString("sayGoodbye", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 🔒 Secure and without the need for any app..
+        /// </summary>
+        public static string secureWithoutApp {
+            get {
+                return ResourceManager.GetString("secureWithoutApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do I need a special app?.
+        /// </summary>
+        public static string specialApp {
+            get {
+                return ResourceManager.GetString("specialApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Features of TableTap.
+        /// </summary>
+        public static string TableTapFeatures {
+            get {
+                return ResourceManager.GetString("TableTapFeatures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is TableTap free?.
+        /// </summary>
+        public static string tableTapFree {
+            get {
+                return ResourceManager.GetString("tableTapFree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TableTap numbers.
+        /// </summary>
+        public static string tableTapNumbers {
+            get {
+                return ResourceManager.GetString("tableTapNumbers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theme Customizer.
+        /// </summary>
+        public static string themeCustomizer {
+            get {
+                return ResourceManager.GetString("themeCustomizer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Why Choose TableTap? .
+        /// </summary>
+        public static string whyChoose {
+            get {
+                return ResourceManager.GetString("whyChoose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes, you can edit and add items whenever you want via the Dashboard..
+        /// </summary>
+        public static string youCanEdit {
+            get {
+                return ResourceManager.GetString("youCanEdit", resourceCulture);
             }
         }
     }
