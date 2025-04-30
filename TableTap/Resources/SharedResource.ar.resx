@@ -276,4 +276,106 @@
   <data name="emailUs" xml:space="preserve">
     <value>راسلنا عبر البريد الإلكتروني:</value>
   </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>تسجيل دخول</value>
+  </data>
+  <data name="EmailLabel" xml:space="preserve">
+    <value>الإيميل</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>تذكرني</value>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>نسيت كلمة المرور</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="InvalidLoginCredentials" xml:space="preserve">
+    <value>بيانات الدخول غير صحيحة</value>
+  </data>
+  <data name="AdminDashboard_Title" xml:space="preserve">
+    <value>صفحة الادمن</value>
+  </data>
+  <data name="AdminDashboard_Subtitle" xml:space="preserve">
+    <value>صفحة الادمن</value>
+  </data>
+  <data name="AddNewMenu_Title" xml:space="preserve">
+    <value>أضف قائمة جديدة</value>
+  </data>
+  <data name="MenuName" xml:space="preserve">
+    <value>اسم القائمة</value>
+  </data>
+  <data name="MenuType" xml:space="preserve">
+    <value>نوع القائمة</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>اختر نوع</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>طعام</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>مشاريب</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="AddMenu_Button" xml:space="preserve">
+    <value>أضف قائمة</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>في الانتظار</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>عرض التفاصيل</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>الإجراءات</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="RequestedPlan" xml:space="preserve">
+    <value>نوع الباقة </value>
+  </data>
+  <data name="EstablishmentName" xml:space="preserve">
+    <value>اسم المحل</value>
+  </data>
+  <data name="RequestingEstablishments_Title" xml:space="preserve">
+    <value>طلبات المحلات</value>
+  </data>
+  <data name="AdminDashboard_Description" xml:space="preserve">
+    <value>إدارة بيانات النظام، مراقبة الطلبات وتحديث القوائم.</value>
+  </data>
+  <data name="SharedEstablishments" xml:space="preserve">
+    <value>المنشآت المشتركة</value>
+  </data>
+  <data name="MostActivePlan" xml:space="preserve">
+    <value>الخطة الأكثر نشاطًا</value>
+  </data>
+  <data name="TotalRequests" xml:space="preserve">
+    <value>إجمالي الطلبات</value>
+  </data>
+  <data name="AdminNavigation" xml:space="preserve">
+    <value>تنقل المسؤول</value>
+  </data>
+  <data name="Facilities" xml:space="preserve">
+    <value>المرافق</value>
+  </data>
+  <data name="Cities" xml:space="preserve">
+    <value>المدن</value>
+  </data>
+  <data name="Plans" xml:space="preserve">
+    <value>الخطط</value>
+  </data>
+  <data name="PlanRequests" xml:space="preserve">
+    <value>طلبات الخطط</value>
+  </data>
 </root>

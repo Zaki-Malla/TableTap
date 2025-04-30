@@ -276,4 +276,106 @@
   <data name="emailUs" xml:space="preserve">
     <value>Email us:</value>
   </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="EmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember Me</value>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="InvalidLoginCredentials" xml:space="preserve">
+    <value>Invalid Login Credentials</value>
+  </data>
+  <data name="AdminDashboard_Title" xml:space="preserve">
+    <value>Admin Dashboard</value>
+  </data>
+  <data name="AdminDashboard_Subtitle" xml:space="preserve">
+    <value>Admin Dashboard</value>
+  </data>
+  <data name="AddNewMenu_Title" xml:space="preserve">
+    <value>Add New Menu Title</value>
+  </data>
+  <data name="MenuName" xml:space="preserve">
+    <value>Menu Name</value>
+  </data>
+  <data name="MenuType" xml:space="preserve">
+    <value>Menu Type</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>Select Option</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>Food</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Drinks</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="AddMenu_Button" xml:space="preserve">
+    <value>Add Menu</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>View Details</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="RequestedPlan" xml:space="preserve">
+    <value>Requested Plan</value>
+  </data>
+  <data name="EstablishmentName" xml:space="preserve">
+    <value>Establishment Name</value>
+  </data>
+  <data name="RequestingEstablishments_Title" xml:space="preserve">
+    <value>Requesting Establishments Title</value>
+  </data>
+  <data name="AdminDashboard_Description" xml:space="preserve">
+    <value>Manage system data, monitor requests and update menus.</value>
+  </data>
+  <data name="SharedEstablishments" xml:space="preserve">
+    <value>Shared Establishments </value>
+  </data>
+  <data name="MostActivePlan" xml:space="preserve">
+    <value>Most Active Plan </value>
+  </data>
+  <data name="TotalRequests" xml:space="preserve">
+    <value>Total Requests </value>
+  </data>
+  <data name="AdminNavigation" xml:space="preserve">
+    <value>Admin Navigation </value>
+  </data>
+  <data name="Facilities" xml:space="preserve">
+    <value>Facilities</value>
+  </data>
+  <data name="Cities" xml:space="preserve">
+    <value>Cities</value>
+  </data>
+  <data name="Plans" xml:space="preserve">
+    <value>Plans</value>
+  </data>
+  <data name="PlanRequests" xml:space="preserve">
+    <value>Plan Requests </value>
+  </data>
 </root>

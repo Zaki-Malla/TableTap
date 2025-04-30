@@ -3,6 +3,26 @@
 }
 
 <style>
+    
+    #logo-container {
+        position: relative;
+        left: 20px;
+        transform-origin: center center;
+        perspective: 1000px;
+    }
+
+    #animated-logo {
+        width: 120px;
+        height: auto;
+        transform-style: preserve-3d;
+    }
+
+    @@media (max-width: 768px) {
+        #animated-logo {
+            width: 80px;
+        }
+    }
+
     @@keyframes gradientMove {
         0%
 
@@ -61,7 +81,10 @@
     <nav class="fixed w-full z-50 bg-indigo-800 text-white shadow-lg">
         <div class="container mx-auto px-6 py-2.5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="../images/logo/main.png" alt="TableTap logo" class="w-16 h-16" />
+                
+                <div id="logo-container">
+                    <img src="@Url.Content("~/images/logo/main.png")" alt="TableTap logo" id="animated-logo" >
+                </div>
                 <span class="text-2xl font-bold text-white">TableTap</span>
             </div>
             <div class="hidden md:flex space-x-6 rtl:space-x-reverse items-center">
@@ -251,6 +274,41 @@
         }
 
         typeWriter();
+        });
+    </script>
+    <script>
+        // Animated Logo Script (now after GSAP loading)
+        document.addEventListener("DOMContentLoaded", function() {
+            gsap.registerPlugin(ScrollTrigger);
+            console.log('GSAP registered'); // Debug check
+
+            const logo = document.getElementById("animated-logo");
+            if (!logo) {
+                console.error('Logo element not found!');
+                return;
+            }
+
+            // Clear any conflicting transitions
+            gsap.set(logo, {
+                transformOrigin: "center center",
+                transformStyle: "preserve-3d",
+                transition: "none"
+            });
+
+            // Horizontal spin animation with markers for debugging
+            gsap.to(logo, {
+                scrollTrigger: {
+                    trigger: "html",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 0.5,
+                    markers: false // Turn on to see scroll range
+                },
+                rotationY: 360 * 3,
+                ease: "none",
+                onStart: () => console.log('Animation started'),
+                onUpdate: () => console.log('Animation updating')
+            });
         });
     </script>
 </body>

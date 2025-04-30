@@ -70,11 +70,83 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Actions.
+        /// </summary>
+        public static string Actions {
+            get {
+                return ResourceManager.GetString("Actions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Menu.
+        /// </summary>
+        public static string AddMenu_Button {
+            get {
+                return ResourceManager.GetString("AddMenu_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add New Menu Title.
+        /// </summary>
+        public static string AddNewMenu_Title {
+            get {
+                return ResourceManager.GetString("AddNewMenu_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage system data, monitor requests and update menus..
+        /// </summary>
+        public static string AdminDashboard_Description {
+            get {
+                return ResourceManager.GetString("AdminDashboard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admin Dashboard.
+        /// </summary>
+        public static string AdminDashboard_Subtitle {
+            get {
+                return ResourceManager.GetString("AdminDashboard_Subtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admin Dashboard.
+        /// </summary>
+        public static string AdminDashboard_Title {
+            get {
+                return ResourceManager.GetString("AdminDashboard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admin Navigation .
+        /// </summary>
+        public static string AdminNavigation {
+            get {
+                return ResourceManager.GetString("AdminNavigation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basic service at a small price with more expensive options for more customizations..
         /// </summary>
         public static string basicServiceAtSmallPrice {
             get {
                 return ResourceManager.GetString("basicServiceAtSmallPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cities.
+        /// </summary>
+        public static string Cities {
+            get {
+                return ResourceManager.GetString("Cities", resourceCulture);
             }
         }
         
@@ -169,6 +241,24 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drinks.
+        /// </summary>
+        public static string Drinks {
+            get {
+                return ResourceManager.GetString("Drinks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ease of access.
         /// </summary>
         public static string EaseAccess {
@@ -192,6 +282,15 @@ namespace TableTap.Resources {
         public static string easyFast {
             get {
                 return ResourceManager.GetString("easyFast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string EmailLabel {
+            get {
+                return ResourceManager.GetString("EmailLabel", resourceCulture);
             }
         }
         
@@ -223,11 +322,29 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Establishment Name.
+        /// </summary>
+        public static string EstablishmentName {
+            get {
+                return ResourceManager.GetString("EstablishmentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Explore Styles.
         /// </summary>
         public static string exploreStyles {
             get {
                 return ResourceManager.GetString("exploreStyles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facilities.
+        /// </summary>
+        public static string Facilities {
+            get {
+                return ResourceManager.GetString("Facilities", resourceCulture);
             }
         }
         
@@ -286,6 +403,24 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Food.
+        /// </summary>
+        public static string Food {
+            get {
+                return ResourceManager.GetString("Food", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forgot Password.
+        /// </summary>
+        public static string ForgotPassword {
+            get {
+                return ResourceManager.GetString("ForgotPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Get a QR code for your establishment that you can print and place on tables or display on screens..
         /// </summary>
         public static string getQR {
@@ -340,6 +475,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid Login Credentials.
+        /// </summary>
+        public static string InvalidLoginCredentials {
+            get {
+                return ResourceManager.GetString("InvalidLoginCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Language.
         /// </summary>
         public static string language {
@@ -358,11 +502,65 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string LoginButton {
+            get {
+                return ResourceManager.GetString("LoginButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log In.
+        /// </summary>
+        public static string LoginTitle {
+            get {
+                return ResourceManager.GetString("LoginTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menu Name.
+        /// </summary>
+        public static string MenuName {
+            get {
+                return ResourceManager.GetString("MenuName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menu Type.
+        /// </summary>
+        public static string MenuType {
+            get {
+                return ResourceManager.GetString("MenuType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Monthly visit to the lists.
         /// </summary>
         public static string monthlyVisit {
             get {
                 return ResourceManager.GetString("monthlyVisit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most Active Plan .
+        /// </summary>
+        public static string MostActivePlan {
+            get {
+                return ResourceManager.GetString("MostActivePlan", resourceCulture);
             }
         }
         
@@ -412,6 +610,42 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string PasswordLabel {
+            get {
+                return ResourceManager.GetString("PasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pending.
+        /// </summary>
+        public static string Pending {
+            get {
+                return ResourceManager.GetString("Pending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plan Requests .
+        /// </summary>
+        public static string PlanRequests {
+            get {
+                return ResourceManager.GetString("PlanRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plans.
+        /// </summary>
+        public static string Plans {
+            get {
+                return ResourceManager.GetString("Plans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reduce paper usage and contribute to the environmental sustainability of your establishment..
         /// </summary>
         public static string reducePaperUsage {
@@ -448,6 +682,33 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remember Me.
+        /// </summary>
+        public static string RememberMe {
+            get {
+                return ResourceManager.GetString("RememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requested Plan.
+        /// </summary>
+        public static string RequestedPlan {
+            get {
+                return ResourceManager.GetString("RequestedPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requesting Establishments Title.
+        /// </summary>
+        public static string RequestingEstablishments_Title {
+            get {
+                return ResourceManager.GetString("RequestingEstablishments_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reset to Default.
         /// </summary>
         public static string resetToDefault {
@@ -475,11 +736,38 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Option.
+        /// </summary>
+        public static string SelectOption {
+            get {
+                return ResourceManager.GetString("SelectOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shared Establishments .
+        /// </summary>
+        public static string SharedEstablishments {
+            get {
+                return ResourceManager.GetString("SharedEstablishments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do I need a special app?.
         /// </summary>
         public static string specialApp {
             get {
                 return ResourceManager.GetString("specialApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
             }
         }
         
@@ -516,6 +804,24 @@ namespace TableTap.Resources {
         public static string themeCustomizer {
             get {
                 return ResourceManager.GetString("themeCustomizer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Requests .
+        /// </summary>
+        public static string TotalRequests {
+            get {
+                return ResourceManager.GetString("TotalRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Details.
+        /// </summary>
+        public static string ViewDetails {
+            get {
+                return ResourceManager.GetString("ViewDetails", resourceCulture);
             }
         }
         
