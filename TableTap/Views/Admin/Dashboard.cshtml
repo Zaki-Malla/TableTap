@@ -1,148 +1,238 @@
 ﻿@{
     ViewData["Title"] = SharedResource.AdminDashboard_Title + " || TableTap";
 }
-
-<!-- Hero Section -->
-<section class="relative overflow-hidden bg-white font-sans">
-    <div class="absolute inset-0 hero-bg animate-gradient"></div>
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div class="absolute bg-indigo-300 opacity-30 rounded-full w-72 h-72 top-10 left-10 animate-float-slow"></div>
-        <div class="absolute bg-indigo-200 opacity-20 rounded-full w-40 h-40 top-40 right-10 animate-float-medium"></div>
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center sm:px-6 lg:px-8">
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-600">@SharedResource.AdminDashboard_Title</h1>
-        <p class="mt-4 text-lg text-gray-800">@SharedResource.AdminDashboard_Description</p>
-    </div>
-</section>
-
-<!-- Main Dashboard Container -->
-<div class="max-w-7xl mx-auto px-4 py-12 space-y-12 sm:px-6 lg:px-8">
-
-    <!-- Admin Overview Boxes -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-xl shadow-2xl hover:shadow-3xl transition transform hover:scale-105">
-            <h3 class="text-sm text-gray-500">@SharedResource.SharedEstablishments</h3>
-            <p class="mt-2 text-2xl font-bold text-indigo-600"></p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-2xl hover:shadow-3xl transition transform hover:scale-105">
-            <h3 class="text-sm text-gray-500">@SharedResource.MostActivePlan</h3>
-            <p class="mt-2 text-2xl font-bold text-indigo-600"></p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-2xl hover:shadow-3xl transition transform hover:scale-105">
-            <h3 class="text-sm text-gray-500">@SharedResource.TotalRequests</h3>
-            <p class="mt-2 text-2xl font-bold text-indigo-600"></p>
-        </div>
-    </section>
-
-    <!-- Admin Quick Navigation -->
-    <section class="bg-gray-50 p-6 rounded-xl shadow-2xl hover:shadow-3xl transition transform hover:scale-105">
-        <h2 class="text-2xl font-semibold text-indigo-600 mb-4">@SharedResource.AdminNavigation</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="/Admin/Facilities" class="block bg-white p-4 rounded-xl text-center shadow hover:shadow-lg transition">@SharedResource.Facilities</a>
-            <a href="/Admin/Cities" class="block bg-white p-4 rounded-xl text-center shadow hover:shadow-lg transition">@SharedResource.Cities</a>
-            <a href="/Admin/Plans" class="block bg-white p-4 rounded-xl text-center shadow hover:shadow-lg transition">@SharedResource.Plans</a>
-            <a href="/Admin/Requests" class="block bg-white p-4 rounded-xl text-center shadow hover:shadow-lg transition">@SharedResource.PlanRequests</a>
-        </div>
-    </section>
-
-    <!-- Add New Menu Section -->
-    <section class="bg-gray-50 p-6 rounded-xl shadow-2xl hover:shadow-3xl transition transform hover:scale-105">
-        <h2 class="text-2xl font-semibold text-indigo-600 mb-4">@SharedResource.AddNewMenu_Title</h2>
-        <form asp-action="AddMenu" method="post" class="space-y-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <label for="MenuName" class="block text-sm text-gray-800">@SharedResource.MenuName</label>
-                    <input type="text" id="MenuName" name="MenuName" class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
-                </div>
-                <div>
-                    <label for="MenuType" class="block text-sm text-gray-800">@SharedResource.MenuType</label>
-                    <select id="MenuType" name="MenuType" class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        <option value="">@SharedResource.SelectOption</option>
-                        <option value="Food">@SharedResource.Food</option>
-                        <option value="Drinks">@SharedResource.Drinks</option>
-                    </select>
-                </div>
-            </div>
-            <div>
-                <label for="Description" class="block text-sm text-gray-800">@SharedResource.Description</label>
-                <textarea id="Description" name="Description" rows="3" class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
-            </div>
-            <button type="submit" class="w-full md:w-auto mt-4 px-6 py-2 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition">@SharedResource.AddMenu_Button</button>
-        </form>
-    </section>
-
-    <!-- Establishment Requests Table -->
-    <section class="bg-white p-6 rounded-xl shadow-2xl hover:shadow-3xl transition transform hover:scale-105">
-        <h2 class="text-2xl font-semibold text-indigo-600 mb-4">@SharedResource.RequestingEstablishments_Title</h2>
-        <div class="overflow-x-auto">
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-100">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-800">@SharedResource.EstablishmentName</th>
-                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-800">@SharedResource.RequestedPlan</th>
-                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-800">@SharedResource.Status</th>
-                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-800">@SharedResource.Actions</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-100">
-                  
-                        
-                </tbody>
-            </table>
-        </div>
-    </section>
-</div>
-
-<!-- Tailwind Custom Animations -->
 <style>
-    .animate-gradient {
-        background: linear-gradient(-45deg, #4f46e5, #6366f1, #818cf8, #a5b4fc);
-        background-size: 400% 400%;
-        animation: gradientBG 10s ease infinite;
-    }
-
-    .animate-float-slow {
-        animation: floatSlow 8s ease-in-out infinite;
-    }
-
-    .animate-float-medium {
-        animation: floatMedium 6s ease-in-out infinite;
-    }
-    @@keyframes gradientBG {
-        0%, 100%
-
-    {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    }
-    @@keyframes floatSlow {
-        0%, 100%
-
-    {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    }
-    @@keyframes floatMedium {
-        0%, 100%
-
-    {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
+    .admin-badge {
+        font-size: 0.75rem;
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.375rem;
+        margin-left: 0.5rem;
+        font-weight: 500;
     }
 </style>
+@await Html.PartialAsync("_LandingHeader")
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Admin Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html">
+                    <span class="admin-badge">@SharedResource.Admin</span>
+                </a>
+                <button class="sidebar-toggle" aria-label="Toggle Sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="admin.html">
+                            <i class="fas fa-home"></i>
+                            <span>@SharedResource.Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-restaurants.html">
+                            <i class="fas fa-building"></i>
+                            <span>@SharedResource.Establishment</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-users.html">
+                            <i class="fas fa-users"></i>
+                            <span>@SharedResource.Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-subscriptions.html">
+                            <i class="fas fa-credit-card"></i>
+                            <span>@SharedResource.Subscriptions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-payment-requests.html">
+                            <i class="fas fa-money-bill"></i>
+                            <span>@SharedResource.PaymentRequests</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-analytics.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>@SharedResource.Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-cities.html">
+                            <i class="fas fa-globe"></i>
+                            <span>@SharedResource.Cities</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-payment-methods.html">
+                            <i class="fas fa-wallet"></i>
+                            <span>@SharedResource.PaymentMethods</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>@SharedResource.Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-security.html">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>@SharedResource.Security</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://placehold.co/100" alt="Admin">
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">@SharedResource.AdminUser</span>
+                        <span class="user-email">@SharedResource.AdminEmail</span>
+                    </div>
+                    <button class="user-settings" aria-label="User settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1>@SharedResource.AdminDashboard_Header</h1>
+                <p>@SharedResource.AdminDashboard_Description</p>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="card stat-card">
+                    <div class="stat-header">
+                        <h3>@SharedResource.Stat_TotalRestaurants</h3>
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">2,856</div>
+                        <p class="stat-change">@string.Format(SharedResource.StatChange_ThisMonth, "124")</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-header">
+                        <h3>@SharedResource.Stat_ActiveUsers</h3>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">3,427</div>
+                        <p class="stat-change">@string.Format(SharedResource.StatChange_ThisMonth, "258")</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-header">
+                        <h3>@SharedResource.Stat_MonthlyRevenue</h3>
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">$128,540</div>
+                        <p class="stat-change">@string.Format(SharedResource.StatChange_LastMonth, "12.5")</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-header">
+                        <h3>@SharedResource.Stat_ActiveCities</h3>
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">42</div>
+                        <p class="stat-change">@string.Format(SharedResource.StatChange_ThisMonth, "3")</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-tabs">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="overview">@SharedResource.Tab_Overview</button>
+                    <button class="tab-btn" data-tab="restaurants">@SharedResource.Tab_Restaurants</button>
+                    <button class="tab-btn" data-tab="users">@SharedResource.Tab_Users</button>
+                    <button class="tab-btn" data-tab="revenue">@SharedResource.Tab_Revenue</button>
+                </div>
+                <div class="tab-content active" id="overview">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>@SharedResource.Growth_PlatformTitle</h3>
+                            <p>@SharedResource.Growth_PlatformDescription</p>
+                        </div>
+                        <div class="card-content chart-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>@SharedResource.ChartPlaceholder_Text</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="restaurants">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>@SharedResource.Analytics_RestaurantTitle</h3>
+                            <p>@SharedResource.Analytics_RestaurantDescription</p>
+                        </div>
+                        <div class="card-content chart-placeholder">
+                            <span>@SharedResource.ChartPlaceholder_GenericText.Replace("[Category]", SharedResource.Restaurants)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="users">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>@SharedResource.Analytics_UserTitle</h3>
+                            <p>@SharedResource.Analytics_UserDescription</p>
+                        </div>
+                        <div class="card-content chart-placeholder">
+                            <span>@SharedResource.ChartPlaceholder_GenericText.Replace("[Category]", SharedResource.Users)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="revenue">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>@SharedResource.Analytics_RevenueTitle</h3>
+                            <p>@SharedResource.Analytics_RevenueDescription</p>
+                        </div>
+                        <div class="card-content chart-placeholder">
+                            <span>@SharedResource.ChartPlaceholder_GenericText.Replace("[Category]", SharedResource.Subscriptions)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sidebar toggle
+        const sidebarToggle = document.querySelector('.sidebar-toggle');
+        const dashboardWrapper = document.querySelector('.dashboard-wrapper');
+
+        sidebarToggle.addEventListener('click', () => {
+          dashboardWrapper.classList.toggle('sidebar-collapsed');
+        });
+
+        // Tab switching
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            button.classList.add('active');
+            const tabId = button.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+          });
+        });
+    </script>
+</body>

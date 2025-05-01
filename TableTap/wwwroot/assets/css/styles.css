@@ -1592,18 +1592,8 @@
   .sidebar-collapsed .user-settings {
     display: none;
   }
-/* Admin Badge */
-.admin-badge {
-    font-size: 0.625rem;
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-    padding: 0.125rem 0.25rem;
-    border-radius: 0.25rem;
-    margin-left: 0.5rem;
-    font-weight: 500;
-  }
-  
-  /* Admin Actions */
+
+ /* Admin Actions */
   .admin-actions {
     display: flex;
     flex-direction: column;

@@ -510,4 +510,106 @@
   <data name="Forgot_password" xml:space="preserve">
     <value>نسيت كلمة المرور؟</value>
   </data>
+  <data name="Admin" xml:space="preserve">
+    <value>المسؤول</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>لوحة القيادة</value>
+  </data>
+  <data name="Establishment" xml:space="preserve">
+    <value>مؤسسات</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>المستخدمون</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>الاشتراكات</value>
+  </data>
+  <data name="PaymentRequests" xml:space="preserve">
+    <value>طلبات الدفع</value>
+  </data>
+  <data name="Analytics" xml:space="preserve">
+    <value>التحليلات</value>
+  </data>
+  <data name="PaymentMethods" xml:space="preserve">
+    <value>طرق الدفع</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>الإعدادات</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>الأمان</value>
+  </data>
+  <data name="AdminUser" xml:space="preserve">
+    <value>مستخدم المسؤول</value>
+  </data>
+  <data name="AdminEmail" xml:space="preserve">
+    <value>admin@tabletap.com</value>
+  </data>
+  <data name="AdminDashboard_Header" xml:space="preserve">
+    <value>لوحة تحكم المسؤول</value>
+  </data>
+  <data name="Stat_TotalRestaurants" xml:space="preserve">
+    <value>إجمالي المطاعم</value>
+  </data>
+  <data name="StatChange_ThisMonth" xml:space="preserve">
+    <value>+{0} هذا الشهر</value>
+  </data>
+  <data name="ChartPlaceholder_GenericText" xml:space="preserve">
+    <value>سيتم عرض تحليلات [Category] هنا</value>
+  </data>
+  <data name="Analytics_RevenueDescription" xml:space="preserve">
+    <value>تحليلات تفصيلية حول إيرادات ونمو الاشتراكات</value>
+  </data>
+  <data name="Analytics_RevenueTitle" xml:space="preserve">
+    <value>تحليلات الإيرادات</value>
+  </data>
+  <data name="Analytics_UserDescription" xml:space="preserve">
+    <value>تحليلات تفصيلية حول تسجيل وتفاعل المستخدمين</value>
+  </data>
+  <data name="Analytics_UserTitle" xml:space="preserve">
+    <value>تحليلات المستخدمين</value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>المطاعم</value>
+  </data>
+  <data name="Analytics_RestaurantDescription" xml:space="preserve">
+    <value>تحليلات تفصيلية حول انضمام ونشاط المطاعم</value>
+  </data>
+  <data name="Analytics_RestaurantTitle" xml:space="preserve">
+    <value>تحليلات المطاعم</value>
+  </data>
+  <data name="ChartPlaceholder_Text" xml:space="preserve">
+    <value>سيتم عرض مخطط التحليلات هنا</value>
+  </data>
+  <data name="Growth_PlatformDescription" xml:space="preserve">
+    <value>النمو الشهري للمطاعم والمستخدمين والإيرادات</value>
+  </data>
+  <data name="Growth_PlatformTitle" xml:space="preserve">
+    <value>نمو المنصة</value>
+  </data>
+  <data name="Tab_Revenue" xml:space="preserve">
+    <value>الإيرادات</value>
+  </data>
+  <data name="Tab_Users" xml:space="preserve">
+    <value>المستخدمون</value>
+  </data>
+  <data name="Tab_Restaurants" xml:space="preserve">
+    <value>المطاعم</value>
+  </data>
+  <data name="Tab_Overview" xml:space="preserve">
+    <value>نظرة عامة</value>
+  </data>
+  <data name="Stat_ActiveCities" xml:space="preserve">
+    <value>المدن النشطة</value>
+  </data>
+  <data name="StatChange_LastMonth" xml:space="preserve">
+    <value>+{0}% عن الشهر الماضي</value>
+  </data>
+  <data name="Stat_MonthlyRevenue" xml:space="preserve">
+    <value>الإيرادات الشهرية</value>
+  </data>
+  <data name="Stat_ActiveUsers" xml:space="preserve">
+    <value>المستخدمون النشطون</value>
+  </data>
 </root>

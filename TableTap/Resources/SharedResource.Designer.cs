@@ -106,6 +106,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin.
+        /// </summary>
+        public static string Admin {
+            get {
+                return ResourceManager.GetString("Admin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Admin Email.
         /// </summary>
         public static string Admin_Email {
@@ -151,6 +160,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin Dashboard .
+        /// </summary>
+        public static string AdminDashboard_Header {
+            get {
+                return ResourceManager.GetString("AdminDashboard_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Admin Dashboard.
         /// </summary>
         public static string AdminDashboard_Subtitle {
@@ -169,6 +187,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to admin@tabletap.com.
+        /// </summary>
+        public static string AdminEmail {
+            get {
+                return ResourceManager.GetString("AdminEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Admin Navigation .
         /// </summary>
         public static string AdminNavigation {
@@ -178,11 +205,83 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin User .
+        /// </summary>
+        public static string AdminUser {
+            get {
+                return ResourceManager.GetString("AdminUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All rights reserved..
         /// </summary>
         public static string allRightsReserved {
             get {
                 return ResourceManager.GetString("allRightsReserved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analytics.
+        /// </summary>
+        public static string Analytics {
+            get {
+                return ResourceManager.GetString("Analytics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detailed analytics about restaurant onboarding and activity. .
+        /// </summary>
+        public static string Analytics_RestaurantDescription {
+            get {
+                return ResourceManager.GetString("Analytics_RestaurantDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant Analytics .
+        /// </summary>
+        public static string Analytics_RestaurantTitle {
+            get {
+                return ResourceManager.GetString("Analytics_RestaurantTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detailed analytics about subscription revenue and growth. .
+        /// </summary>
+        public static string Analytics_RevenueDescription {
+            get {
+                return ResourceManager.GetString("Analytics_RevenueDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revenue Analytics .
+        /// </summary>
+        public static string Analytics_RevenueTitle {
+            get {
+                return ResourceManager.GetString("Analytics_RevenueTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detailed analytics about user registration and engagement. .
+        /// </summary>
+        public static string Analytics_UserDescription {
+            get {
+                return ResourceManager.GetString("Analytics_UserDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Analytics .
+        /// </summary>
+        public static string Analytics_UserTitle {
+            get {
+                return ResourceManager.GetString("Analytics_UserTitle", resourceCulture);
             }
         }
         
@@ -210,6 +309,24 @@ namespace TableTap.Resources {
         public static string careers {
             get {
                 return ResourceManager.GetString("careers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [Category] analytics will appear here .
+        /// </summary>
+        public static string ChartPlaceholder_GenericText {
+            get {
+                return ResourceManager.GetString("ChartPlaceholder_GenericText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analytics chart will appear here .
+        /// </summary>
+        public static string ChartPlaceholder_Text {
+            get {
+                return ResourceManager.GetString("ChartPlaceholder_Text", resourceCulture);
             }
         }
         
@@ -358,6 +475,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dashboard.
+        /// </summary>
+        public static string Dashboard {
+            get {
+                return ResourceManager.GetString("Dashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
@@ -444,6 +570,15 @@ namespace TableTap.Resources {
         public static string environmentalProtection {
             get {
                 return ResourceManager.GetString("environmentalProtection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Establishment.
+        /// </summary>
+        public static string Establishment {
+            get {
+                return ResourceManager.GetString("Establishment", resourceCulture);
             }
         }
         
@@ -736,6 +871,24 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Monthly growth of restaurants, users, and revenue. .
+        /// </summary>
+        public static string Growth_PlatformDescription {
+            get {
+                return ResourceManager.GetString("Growth_PlatformDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Platform Growth .
+        /// </summary>
+        public static string Growth_PlatformTitle {
+            get {
+                return ResourceManager.GetString("Growth_PlatformTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A sleek digital solution for present your menu online in an eco-friendly and efficient way.
         /// </summary>
         public static string Hero_Subtitle {
@@ -934,6 +1087,24 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Payment Methods .
+        /// </summary>
+        public static string PaymentMethods {
+            get {
+                return ResourceManager.GetString("PaymentMethods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment Requests.
+        /// </summary>
+        public static string PaymentRequests {
+            get {
+                return ResourceManager.GetString("PaymentRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pending.
         /// </summary>
         public static string Pending {
@@ -1078,6 +1249,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Restaurants.
+        /// </summary>
+        public static string Restaurants {
+            get {
+                return ResourceManager.GetString("Restaurants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Say goodbye to repetitive printing and save your establishment the periodic costs of lists..
         /// </summary>
         public static string sayGoodbye {
@@ -1096,11 +1276,29 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Security.
+        /// </summary>
+        public static string Security {
+            get {
+                return ResourceManager.GetString("Security", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Option.
         /// </summary>
         public static string SelectOption {
             get {
                 return ResourceManager.GetString("SelectOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
             }
         }
         
@@ -1132,11 +1330,110 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active Cities .
+        /// </summary>
+        public static string Stat_ActiveCities {
+            get {
+                return ResourceManager.GetString("Stat_ActiveCities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Active Users .
+        /// </summary>
+        public static string Stat_ActiveUsers {
+            get {
+                return ResourceManager.GetString("Stat_ActiveUsers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly Revenue .
+        /// </summary>
+        public static string Stat_MonthlyRevenue {
+            get {
+                return ResourceManager.GetString("Stat_MonthlyRevenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Restaurants .
+        /// </summary>
+        public static string Stat_TotalRestaurants {
+            get {
+                return ResourceManager.GetString("Stat_TotalRestaurants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +{0}% from last month .
+        /// </summary>
+        public static string StatChange_LastMonth {
+            get {
+                return ResourceManager.GetString("StatChange_LastMonth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +{0} this month.
+        /// </summary>
+        public static string StatChange_ThisMonth {
+            get {
+                return ResourceManager.GetString("StatChange_ThisMonth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status.
         /// </summary>
         public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subscriptions.
+        /// </summary>
+        public static string Subscriptions {
+            get {
+                return ResourceManager.GetString("Subscriptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overview.
+        /// </summary>
+        public static string Tab_Overview {
+            get {
+                return ResourceManager.GetString("Tab_Overview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurants.
+        /// </summary>
+        public static string Tab_Restaurants {
+            get {
+                return ResourceManager.GetString("Tab_Restaurants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revenue.
+        /// </summary>
+        public static string Tab_Revenue {
+            get {
+                return ResourceManager.GetString("Tab_Revenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Users.
+        /// </summary>
+        public static string Tab_Users {
+            get {
+                return ResourceManager.GetString("Tab_Users", resourceCulture);
             }
         }
         
@@ -1200,6 +1497,15 @@ namespace TableTap.Resources {
         public static string userDashboard {
             get {
                 return ResourceManager.GetString("userDashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Users.
+        /// </summary>
+        public static string Users {
+            get {
+                return ResourceManager.GetString("Users", resourceCulture);
             }
         }
         

@@ -510,4 +510,106 @@
   <data name="Forgot_password" xml:space="preserve">
     <value>Forgot password?</value>
   </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Establishment" xml:space="preserve">
+    <value>Establishment</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>Subscriptions</value>
+  </data>
+  <data name="PaymentRequests" xml:space="preserve">
+    <value>Payment Requests</value>
+  </data>
+  <data name="Analytics" xml:space="preserve">
+    <value>Analytics</value>
+  </data>
+  <data name="PaymentMethods" xml:space="preserve">
+    <value>Payment Methods </value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="AdminUser" xml:space="preserve">
+    <value>Admin User </value>
+  </data>
+  <data name="AdminEmail" xml:space="preserve">
+    <value>admin@tabletap.com</value>
+  </data>
+  <data name="AdminDashboard_Header" xml:space="preserve">
+    <value>Admin Dashboard </value>
+  </data>
+  <data name="Stat_TotalRestaurants" xml:space="preserve">
+    <value>Total Restaurants </value>
+  </data>
+  <data name="StatChange_ThisMonth" xml:space="preserve">
+    <value>+{0} this month</value>
+  </data>
+  <data name="ChartPlaceholder_GenericText" xml:space="preserve">
+    <value>[Category] analytics will appear here </value>
+  </data>
+  <data name="Analytics_RevenueDescription" xml:space="preserve">
+    <value>Detailed analytics about subscription revenue and growth. </value>
+  </data>
+  <data name="Analytics_RevenueTitle" xml:space="preserve">
+    <value>Revenue Analytics </value>
+  </data>
+  <data name="Analytics_UserDescription" xml:space="preserve">
+    <value>Detailed analytics about user registration and engagement. </value>
+  </data>
+  <data name="Analytics_UserTitle" xml:space="preserve">
+    <value>User Analytics </value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
+  <data name="Analytics_RestaurantDescription" xml:space="preserve">
+    <value>Detailed analytics about restaurant onboarding and activity. </value>
+  </data>
+  <data name="Analytics_RestaurantTitle" xml:space="preserve">
+    <value>Restaurant Analytics </value>
+  </data>
+  <data name="ChartPlaceholder_Text" xml:space="preserve">
+    <value>Analytics chart will appear here </value>
+  </data>
+  <data name="Growth_PlatformDescription" xml:space="preserve">
+    <value>Monthly growth of restaurants, users, and revenue. </value>
+  </data>
+  <data name="Growth_PlatformTitle" xml:space="preserve">
+    <value>Platform Growth </value>
+  </data>
+  <data name="Tab_Revenue" xml:space="preserve">
+    <value>Revenue</value>
+  </data>
+  <data name="Tab_Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Tab_Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
+  <data name="Tab_Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Stat_ActiveCities" xml:space="preserve">
+    <value>Active Cities </value>
+  </data>
+  <data name="StatChange_LastMonth" xml:space="preserve">
+    <value>+{0}% from last month </value>
+  </data>
+  <data name="Stat_MonthlyRevenue" xml:space="preserve">
+    <value>Monthly Revenue </value>
+  </data>
+  <data name="Stat_ActiveUsers" xml:space="preserve">
+    <value>Active Users </value>
+  </data>
 </root>
