@@ -489,4 +489,25 @@
   <data name="featureMobileItem3" xml:space="preserve">
     <value>لا حاجة لتحميل تطبيق</value>
   </data>
+  <data name="AdminAuth_Title" xml:space="preserve">
+    <value>تسجيل دخول الادمن</value>
+  </data>
+  <data name="Admin_Login" xml:space="preserve">
+    <value>تسجيل دخول الادمن</value>
+  </data>
+  <data name="authorized" xml:space="preserve">
+    <value>يمكن للمسؤولين المخولين فقط الوصول إلى هذه اللوحة.</value>
+  </data>
+  <data name="Admin_Email" xml:space="preserve">
+    <value>ايميل الادمن</value>
+  </data>
+  <data name="Enter_admin_email" xml:space="preserve">
+    <value>ادخل ايميل ادمن</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="Forgot_password" xml:space="preserve">
+    <value>نسيت كلمة المرور؟</value>
+  </data>
 </root>

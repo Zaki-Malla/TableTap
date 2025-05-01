@@ -489,4 +489,25 @@
   <data name="featureMobileItem3" xml:space="preserve">
     <value>No app download required</value>
   </data>
+  <data name="AdminAuth_Title" xml:space="preserve">
+    <value>Admin login</value>
+  </data>
+  <data name="Admin_Login" xml:space="preserve">
+    <value>Admin Login</value>
+  </data>
+  <data name="authorized" xml:space="preserve">
+    <value>Only authorized administrators can access this panel.</value>
+  </data>
+  <data name="Admin_Email" xml:space="preserve">
+    <value>Admin Email</value>
+  </data>
+  <data name="Enter_admin_email" xml:space="preserve">
+    <value>Enter admin email</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Forgot_password" xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
 </root>

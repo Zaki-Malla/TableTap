@@ -106,6 +106,33 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin Email.
+        /// </summary>
+        public static string Admin_Email {
+            get {
+                return ResourceManager.GetString("Admin_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admin Login.
+        /// </summary>
+        public static string Admin_Login {
+            get {
+                return ResourceManager.GetString("Admin_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admin login.
+        /// </summary>
+        public static string AdminAuth_Title {
+            get {
+                return ResourceManager.GetString("AdminAuth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Admin Dashboard.
         /// </summary>
         public static string adminDashboard {
@@ -156,6 +183,15 @@ namespace TableTap.Resources {
         public static string allRightsReserved {
             get {
                 return ResourceManager.GetString("allRightsReserved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Only authorized administrators can access this panel..
+        /// </summary>
+        public static string authorized {
+            get {
+                return ResourceManager.GetString("authorized", resourceCulture);
             }
         }
         
@@ -390,6 +426,15 @@ namespace TableTap.Resources {
         public static string emailUs {
             get {
                 return ResourceManager.GetString("emailUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter admin email.
+        /// </summary>
+        public static string Enter_admin_email {
+            get {
+                return ResourceManager.GetString("Enter_admin_email", resourceCulture);
             }
         }
         
@@ -655,6 +700,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Forgot password?.
+        /// </summary>
+        public static string Forgot_password {
+            get {
+                return ResourceManager.GetString("Forgot_password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forgot Password.
         /// </summary>
         public static string ForgotPassword {
@@ -858,6 +912,15 @@ namespace TableTap.Resources {
         public static string Nav_Stats {
             get {
                 return ResourceManager.GetString("Nav_Stats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
             }
         }
         
