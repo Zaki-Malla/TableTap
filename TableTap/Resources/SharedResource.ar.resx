@@ -132,8 +132,8 @@
   <data name="Nav_Features" xml:space="preserve">
     <value>المميزات</value>
   </data>
-  <data name="GetStarted" xml:space="preserve">
-    <value>ابدأ الآن</value>
+  <data name="viewPricing" xml:space="preserve">
+    <value>عرض الأسعار</value>
   </data>
   <data name="Nav_HowItWorks" xml:space="preserve">
     <value>كيف يعمل</value>
@@ -276,8 +276,8 @@
   <data name="emailUs" xml:space="preserve">
     <value>راسلنا عبر البريد الإلكتروني:</value>
   </data>
-  <data name="LoginTitle" xml:space="preserve">
-    <value>تسجيل دخول</value>
+  <data name="heroDescription" xml:space="preserve">
+    <value>أنشئ قوائم رقمية جميلة، وشاركها عبر رموز QR، وقدم لعملائك تجربة سلسة.</value>
   </data>
   <data name="EmailLabel" xml:space="preserve">
     <value>الإيميل</value>
@@ -288,13 +288,13 @@
   <data name="RememberMe" xml:space="preserve">
     <value>تذكرني</value>
   </data>
-  <data name="LoginButton" xml:space="preserve">
-    <value>تسجيل الدخول</value>
+  <data name="getStarted" xml:space="preserve">
+    <value>ابدأ الآن</value>
   </data>
   <data name="ForgotPassword" xml:space="preserve">
     <value>نسيت كلمة المرور</value>
   </data>
-  <data name="Login" xml:space="preserve">
+  <data name="login" xml:space="preserve">
     <value>تسجيل الدخول</value>
   </data>
   <data name="InvalidLoginCredentials" xml:space="preserve">
@@ -377,5 +377,116 @@
   </data>
   <data name="PlanRequests" xml:space="preserve">
     <value>طلبات الخطط</value>
+  </data>
+  <data name="digitalMenuPlatform" xml:space="preserve">
+    <value>منصة القائمة الرقمية للمؤسسات. قم بإنشاء ومشاركة القوائم عبر رموز QR.</value>
+  </data>
+  <data name="product" xml:space="preserve">
+    <value>المنتج</value>
+  </data>
+  <data name="pricing" xml:space="preserve">
+    <value>التسعير</value>
+  </data>
+  <data name="faq" xml:space="preserve">
+    <value>الأسئلة الشائعة</value>
+  </data>
+  <data name="company" xml:space="preserve">
+    <value>الشركة</value>
+  </data>
+  <data name="about" xml:space="preserve">
+    <value>عن الشركة</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>الاتصال</value>
+  </data>
+  <data name="careers" xml:space="preserve">
+    <value>الوظائف</value>
+  </data>
+  <data name="legal" xml:space="preserve">
+    <value>قانوني</value>
+  </data>
+  <data name="terms" xml:space="preserve">
+    <value>الشروط</value>
+  </data>
+  <data name="privacy" xml:space="preserve">
+    <value>الخصوصية</value>
+  </data>
+  <data name="cookies" xml:space="preserve">
+    <value>الكوكيز</value>
+  </data>
+  <data name="allRightsReserved" xml:space="preserve">
+    <value>جميع الحقوق محفوظة.</value>
+  </data>
+  <data name="adminDashboard" xml:space="preserve">
+    <value>لوحة تحكم الإدارة</value>
+  </data>
+  <data name="userDashboard" xml:space="preserve">
+    <value>لوحة تحكم المستخدم</value>
+  </data>
+  <data name="signup" xml:space="preserve">
+    <value>إنشاء حساب</value>
+  </data>
+  <data name="heroHeading" xml:space="preserve">
+    <value>قوائم رقمية للمؤسسات الحديثة</value>
+  </data>
+  <data name="featuresSectionHeading" xml:space="preserve">
+    <value>ميزات مصممة للمؤسسات</value>
+  </data>
+  <data name="featuresSectionDescription" xml:space="preserve">
+    <value>كل ما تحتاجه لإنشاء وإدارة القوائم الرقمية لمؤسستك.</value>
+  </data>
+  <data name="featureQrCodeHeading" xml:space="preserve">
+    <value>قوائم QR</value>
+  </data>
+  <data name="featureQrCodeDescription" xml:space="preserve">
+    <value>أنشئ رموز QR فريدة لكل طاولة ترتبط مباشرةً بقائمتك الرقمية.</value>
+  </data>
+  <data name="featureMenuManagementHeading" xml:space="preserve">
+    <value>إدارة القوائم</value>
+  </data>
+  <data name="featureMenuManagementDescription" xml:space="preserve">
+    <value>أنشئ وقم بتحديث بنود القائمة والفئات والأسعار بسهولة.</value>
+  </data>
+  <data name="featureMobileOptimizedHeading" xml:space="preserve">
+    <value>تحسين للجوال</value>
+  </data>
+  <data name="featureMobileOptimizedDescription" xml:space="preserve">
+    <value>قوائم جميلة تبدو رائعة على أي جهاز، وخاصة الهواتف الذكية.</value>
+  </data>
+  <data name="pricingSectionHeading" xml:space="preserve">
+    <value>أسعار بسيطة وشفافة</value>
+  </data>
+  <data name="pricingSectionDescription" xml:space="preserve">
+    <value>اختر الخطة التي تناسب مؤسستك.</value>
+  </data>
+  <data name="ctaSectionHeading" xml:space="preserve">
+    <value>هل أنتم جاهزون لتحويل مؤسستكم؟</value>
+  </data>
+  <data name="ctaSectionDescription" xml:space="preserve">
+    <value>انضم إلى العديد المؤسسات التي تستخدم TableTap لتحسين تجربة الطعام.</value>
+  </data>
+  <data name="featureQRCodeItem1" xml:space="preserve">
+    <value>إنشاء رموز QR غير محدودة</value>
+  </data>
+  <data name="featureQRCodeItem2" xml:space="preserve">
+    <value>رموز مخصصة لكل نوع</value>
+  </data>
+  <data name="featureQRCodeItem3" xml:space="preserve">
+    <value>ملفات قابلة للطباعة بدقة عالية</value>
+  </data>
+  <data name="featureMenuItem1" xml:space="preserve">
+    <value>تحميل صور لكل طبق</value>
+  </data>
+  <data name="featureMenuItem2" xml:space="preserve">
+    <value>معلومات الوصفة أو المحتويات لكل طلب</value>
+  </data>
+  <data name="featureMobileItem1" xml:space="preserve">
+    <value>تصميم متجاوب</value>
+  </data>
+  <data name="featureMobileItem2" xml:space="preserve">
+    <value>سرعة تحميل عالية</value>
+  </data>
+  <data name="featureMobileItem3" xml:space="preserve">
+    <value>لا حاجة لتحميل تطبيق</value>
   </data>
 </root>

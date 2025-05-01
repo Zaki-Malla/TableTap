@@ -1,314 +1,205 @@
 ﻿@{
-    ViewData["Title"] = SharedResource.homePage + " || TableTap";
+    ViewData["Title"] = "TableTap - Digital Menu Platform for Establishments";
 }
 
 <style>
-    
-    #logo-container {
-        position: relative;
-        left: 20px;
-        transform-origin: center center;
-        perspective: 1000px;
+    .feature-list li i {
+        margin-inline-end: 0.4rem;
     }
-
-    #animated-logo {
-        width: 120px;
-        height: auto;
-        transform-style: preserve-3d;
-    }
-
-    @@media (max-width: 768px) {
-        #animated-logo {
-            width: 80px;
-        }
-    }
-
-    @@keyframes gradientMove {
-        0%
-
-    {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-
-    }
-
-    .hero-bg {
-        background: linear-gradient(45deg, #4c6ef5, #a855f7);
-        background-size: 400% 400%;
-        animation: gradientMove 10s ease infinite;
-    }
-    @@keyframes circleMove {
-        0%
-
-    {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.5);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    }
-
-    .circle {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.3);
-        animation: circleMove 6s ease infinite;
-    }
-
 
 </style>
-<body class="font-sans text-[#2D3748] bg-white">
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-indigo-800 text-white shadow-lg">
-        <div class="container mx-auto px-6 py-2.5 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                
-                <div id="logo-container">
-                    <img src="@Url.Content("~/images/logo/main.png")" alt="TableTap logo" id="animated-logo" >
-                </div>
-                <span class="text-2xl font-bold text-white">TableTap</span>
-            </div>
-            <div class="hidden md:flex space-x-6 rtl:space-x-reverse items-center">
-                <a href="#features" class="text-white hover:text-indigo-300 transition duration-300">@SharedResource.Nav_Features</a>
-                <a href="#how" class="text-white hover:text-indigo-300 transition duration-300">@SharedResource.Nav_HowItWorks</a>
-                <a href="#faq" class="text-white hover:text-indigo-300 transition duration-300">@SharedResource.Nav_FAQ</a>
-                <a href="#stats" class="text-white hover:text-indigo-300 transition duration-300">@SharedResource.Nav_Stats</a>
-                <a href="#contact" class="text-white hover:text-indigo-300 transition duration-300">@SharedResource.Nav_Contact</a>
-                <a href="#" class="ml-4 px-6 py-3 bg-white text-indigo-800 font-bold rounded-full shadow-lg hover:bg-indigo-50 transition transform hover:scale-105">@SharedResource.GetStarted</a>
-                <div class="relative">
-                    <button class="px-4 py-2 bg-white text-indigo-600 border border-indigo-600 rounded hover:bg-indigo-50 dropdown-toggle"
-                            id="languageDropdown" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @(CultureInfo.CurrentUICulture.Name.StartsWith("ar") ? "العربية" : "English")
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end py-0" aria-labelledby="languageDropdown">
-                        <a class="dropdown-item"
-                           asp-controller="Language"
-                           asp-action="ChangeLanguage"
-                           asp-route-lang="en">
-                            English
-                        </a>
-                        <a class="dropdown-item"
-                           asp-controller="Language"
-                           asp-action="ChangeLanguage"
-                           asp-route-lang="ar">
-                            العربية
-                        </a>
+
+<body>
+    <div class="site-wrapper">
+
+        @Html.Partial("_LandingHeader")
+
+        <main>  
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h1>@SharedResource.heroHeading</h1>
+                            <p>@SharedResource.heroDescription</p>
+                            <div class="hero-buttons">
+                                <a href="signup.html" class="btn btn-primary btn-lg">@SharedResource.getStarted</a>
+                                <a href="pricing.html" class="btn btn-outline btn-lg">@SharedResource.viewPricing</a>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="~/images/bg/index-1.png" alt="TableTap dashboard preview">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="md:hidden">
-                <button @@click="mobileMenuOpen = !mobileMenuOpen">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div x-show="mobileMenuOpen" class="md:hidden px-6 pb-4 bg-indigo-800 text-white">
-            <a href="#features" class="block py-2 hover:text-indigo-300 transition duration-300">@SharedResource.Nav_Features</a>
-            <a href="#how" class="block py-2 hover:text-indigo-300 transition duration-300">@SharedResource.Nav_HowItWorks</a>
-            <a href="#faq" class="block py-2 hover:text-indigo-300 transition duration-300">@SharedResource.Nav_FAQ</a>
-            <a href="#stats" class="block py-2 hover:text-indigo-300 transition duration-300">@SharedResource.Nav_Stats</a>
-            <a href="#contact" class="block py-2 hover:text-indigo-300 transition duration-300">@SharedResource.Nav_Contact</a>
-        </div>
-    </nav>
+            </section>
 
-    <!-- Hero Section -->
-    <section class="h-screen flex items-center justify-center hero-bg text-white text-center relative overflow-hidden">
-        <div class="max-w-3xl z-10">
-            <img src="../images/logo/main.png" alt="Logo" class="w-72 h-72 mx-auto mb-6 transition-transform transform hover:scale-110" />
-            <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-up">@SharedResource.Hero_Title</h1>
-            <p class="text-lg font-medium mb-6" data-aos="fade-up" data-aos-delay="300">@SharedResource.Hero_Subtitle</p>
-            <a href="#features" class="inline-block px-6 py-3 bg-white text-indigo-600 font-bold rounded-full shadow-lg hover:bg-indigo-50 transition-transform duration-300 transform hover:scale-105">@SharedResource.GetStarted</a>
-        </div>
-    </section>
-
-    <!-- Animated Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6">
-                <span id="typewriter" class="inline-block whitespace-nowrap border-r-2 border-indigo-600 pr-1"></span>
-            </h2>
-            <div class="space-y-4 max-w-2xl mx-auto">
-                <p class="text-lg" data-aos="fade-up" data-aos-delay="100">@SharedResource.establishmentDigitalFuture</p>
-                <p class="text-lg" data-aos="fade-up" data-aos-delay="200">@SharedResource.easyFast</p>
-                <p class="text-lg" data-aos="fade-up" data-aos-delay="300">@SharedResource.secureWithoutApp</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold text-gray-800 mb-12">@SharedResource.TableTapFeatures</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-white border border-gray-400 rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">@SharedResource.EaseAccess</h3>
-                    <p class="text-gray-600">@SharedResource.customersAccessQR</p>
-                </div>
-                <div class="p-6 bg-white border border-gray-400 rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">@SharedResource.environmentalProtection</h3>
-                    <p class="text-gray-600">@SharedResource.reducePaperUsage</p>
-                </div>
-                <div class="p-6 bg-white border border-gray-400 rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">@SharedResource.costSavings</h3>
-                    <p class="text-gray-600">@SharedResource.sayGoodbye</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- How It Works -->
-    <section id="how" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">@SharedResource.howTableTapWork</h2>
-            <div class="space-y-6">
-                <div class="bg-white border border-gray-400 shadow-2xl p-6 rounded-xl hover:shadow-3xl transition-shadow duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">1. @SharedResource.registration</h3>
-                    <p class="text-gray-600">@SharedResource.registerYourEstablishment</p>
-                </div>
-                <div class="bg-white border border-gray-400 shadow-2xl p-6 rounded-xl hover:shadow-3xl transition-shadow duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">2. @SharedResource.createQR</h3>
-                    <p class="text-gray-600">@SharedResource.getQR</p>
-                </div>
-                <div class="bg-white border border-gray-400 shadow-2xl p-6 rounded-xl hover:shadow-3xl transition-shadow duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">3. @SharedResource.accessToMenu</h3>
-                    <p class="text-gray-600">@SharedResource.customersUsePhones</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Stats Section -->
-    <section id="stats" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">@SharedResource.tableTapNumbers</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white shadow p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-3xl font-bold text-indigo-600">+150</h3>
-                    <p class="mt-2">@SharedResource.registeredEstablishment</p>
-                </div>
-                <div class="bg-white shadow p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-3xl font-bold text-indigo-600">+30K</h3>
-                    <p class="mt-2">@SharedResource.monthlyVisit</p>
-                </div>
-                <div class="bg-white shadow p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-3xl font-bold text-indigo-600">+99%</h3>
-                    <p class="mt-2">@SharedResource.customerSatisfaction</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">@SharedResource.Nav_FAQ</h2>
-            <div class="space-y-4" x-data="{ selected: null }">
-                <template x-for="(faq, index) in [
-        { q: '@SharedResource.tableTapFree', a: '@SharedResource.basicServiceAtSmallPrice' },
-        { q: '@SharedResource.specialApp', a: '@SharedResource.clientUseBrowser' },
-        { q: '@SharedResource.easilyCustomized', a: '@SharedResource.youCanEdit' }
-      ]" :key="index">
-                    <div class="border border-gray-300 rounded-lg p-4 cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out" @@click="selected !== index ? selected = index : selected = null">
-                        <h3 class="text-lg font-semibold flex justify-between items-center text-gray-800" x-text="faq.q">
-                            <span :class="selected === index ? 'rotate-180' : ''" class="transition-transform">⌄</span>
-                        </h3>
-                        <div x-show="selected === index" class="mt-2 text-gray-600" x-text="faq.a"></div>
+            <section class="features">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>@SharedResource.featuresSectionHeading</h2>
+                        <p>@SharedResource.featuresSectionDescription</p>
                     </div>
-                </template>
-            </div>
-        </div>
-    </section>
+                    <div class="features-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-qrcode feature-icon"></i>
+                                <h3>@SharedResource.featureQrCodeHeading</h3>
+                                <p>@SharedResource.featureQrCodeDescription</p>
+                            </div>
+                            <div class="card-content">
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check "></i>@SharedResource.featureQRCodeItem1</li>
+                                    <li><i class="fas fa-check"></i>@SharedResource.featureQRCodeItem2</li>
+                                    <li><i class="fas fa-check"></i>@SharedResource.featureQRCodeItem3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-utensils feature-icon"></i>
+                                <h3>@SharedResource.featureMenuManagementHeading</h3>
+                                <p>@SharedResource.featureMenuManagementDescription</p>
+                            </div>
+                            <div class="card-content">
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> @SharedResource.featureMenuItem1</li>
+                                    <li><i class="fas fa-check"></i> @SharedResource.featureMenuItem2</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-mobile-alt feature-icon"></i>
+                                <h3>@SharedResource.featureMobileOptimizedHeading</h3>
+                                <p>@SharedResource.featureMobileOptimizedDescription</p>
+                            </div>
+                            <div class="card-content">
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> @SharedResource.featureMobileItem1</li>
+                                    <li><i class="fas fa-check"></i> @SharedResource.featureMobileItem2</li>
+                                    <li><i class="fas fa-check"></i> @SharedResource.featureMobileItem3+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section class="pricing">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>@SharedResource.pricingSectionHeading</h2>
+                        <p>@SharedResource.pricingSectionDescription</p>
+                    </div>
+                    <div class="pricing-grid">
+                        <div class="card pricing-card">
+                            <div class="card-header">
+                                <h3>Starter</h3>
+                                <div class="price">$29</div>
+                                <p>per month</p>
+                            </div>
+                            <div class="card-content">
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> 1 establishment location</li>
+                                    <li><i class="fas fa-check"></i> Up to 50 menu items</li>
+                                    <li><i class="fas fa-check"></i> Basic analytics</li>
+                                    <li><i class="fas fa-check"></i> Email support</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a href="signup.html" class="btn btn-primary btn-full">Get Started</a>
+                            </div>
+                        </div>
+                        <div class="card pricing-card popular">
+                            <div class="popular-tag">Popular</div>
+                            <div class="card-header">
+                                <h3>Professional</h3>
+                                <div class="price">$79</div>
+                                <p>per month</p>
+                            </div>
+                            <div class="card-content">
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> Up to 3 establishment locations</li>
+                                    <li><i class="fas fa-check"></i> Unlimited menu items</li>
+                                    <li><i class="fas fa-check"></i> Advanced analytics</li>
+                                    <li><i class="fas fa-check"></i> Priority email support</li>
+                                    <li><i class="fas fa-check"></i> Custom branding</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a href="signup.html" class="btn btn-primary btn-full">Get Started</a>
+                            </div>
+                        </div>
+                        <div class="card pricing-card">
+                            <div class="card-header">
+                                <h3>Enterprise</h3>
+                                <div class="price">$199</div>
+                                <p>per month</p>
+                            </div>
+                            <div class="card-content">
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> Unlimited establishment locations</li>
+                                    <li><i class="fas fa-check"></i> Unlimited menu items</li>
+                                    <li><i class="fas fa-check"></i> Advanced analytics & reporting</li>
+                                    <li><i class="fas fa-check"></i> 24/7 phone & email support</li>
+                                    <li><i class="fas fa-check"></i> Custom development</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a href="contact.html" class="btn btn-primary btn-full">Contact Sales</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6" data-aos="fade-up" data-aos-duration="500">@SharedResource.contactUs</h2>
-            <p class="text-lg text-gray-700">@SharedResource.emailUs</p>
-            <p class="text-xl font-semibold mt-2 text-indigo-700">support@tabletap.com</p>
-        </div>
-    </section>
+            <section class="cta">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2>@SharedResource.ctaSectionHeading</h2>
+                        <p>@SharedResource.ctaSectionDescription</p>
+                        <div class="cta-buttons">
+                            <a href="signup.html" class="btn btn-primary btn-lg">@SharedResource.getStarted</a>
+                            <a href="contact.html" class="btn btn-outline btn-lg">@SharedResource.contactUs</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @Html.Partial("_LandingFooter")
+
+    </div>
 
     <script>
-        document.addEventListener('alpine:init', () => {
-          Alpine.data('accordion', () => ({ selected: null }));
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+          if (mobileMenu.classList.contains('active')) {
+            mobileMenuButton.innerHTML = '<i class="fas fa-times"></i>';
+          } else {
+            mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+          }
         });
-    </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const text = @Html.Raw(Json.Serialize(SharedResource.whyChoose));
-        let i = 0;
-        const speed = 100;
-        const target = document.getElementById("typewriter");
+        const themeToggle = document.querySelector('.theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-        function typeWriter() {
-            if (i < text.length) {
-            target.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-            }
+        const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+
+        if (currentTheme === 'dark') {
+          document.body.classList.add('dark-theme');
         }
 
-        typeWriter();
-        });
-    </script>
-    <script>
-        // Animated Logo Script (now after GSAP loading)
-        document.addEventListener("DOMContentLoaded", function() {
-            gsap.registerPlugin(ScrollTrigger);
-            console.log('GSAP registered'); // Debug check
-
-            const logo = document.getElementById("animated-logo");
-            if (!logo) {
-                console.error('Logo element not found!');
-                return;
-            }
-
-            // Clear any conflicting transitions
-            gsap.set(logo, {
-                transformOrigin: "center center",
-                transformStyle: "preserve-3d",
-                transition: "none"
-            });
-
-            // Horizontal spin animation with markers for debugging
-            gsap.to(logo, {
-                scrollTrigger: {
-                    trigger: "html",
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: 0.5,
-                    markers: false // Turn on to see scroll range
-                },
-                rotationY: 360 * 3,
-                ease: "none",
-                onStart: () => console.log('Animation started'),
-                onUpdate: () => console.log('Animation updating')
-            });
+        themeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-theme');
+          const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+          localStorage.setItem('theme', theme);
         });
     </script>
 </body>

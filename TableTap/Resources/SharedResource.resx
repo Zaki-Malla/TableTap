@@ -132,8 +132,8 @@
   <data name="Nav_Features" xml:space="preserve">
     <value>Features</value>
   </data>
-  <data name="GetStarted" xml:space="preserve">
-    <value>Get Started</value>
+  <data name="viewPricing" xml:space="preserve">
+    <value>View Pricing</value>
   </data>
   <data name="Nav_HowItWorks" xml:space="preserve">
     <value>How It Works</value>
@@ -276,8 +276,8 @@
   <data name="emailUs" xml:space="preserve">
     <value>Email us:</value>
   </data>
-  <data name="LoginTitle" xml:space="preserve">
-    <value>Log In</value>
+  <data name="heroDescription" xml:space="preserve">
+    <value>Create beautiful digital menus, share them via QR codes, and give your customers a seamless experience.</value>
   </data>
   <data name="EmailLabel" xml:space="preserve">
     <value>Email</value>
@@ -288,14 +288,14 @@
   <data name="RememberMe" xml:space="preserve">
     <value>Remember Me</value>
   </data>
-  <data name="LoginButton" xml:space="preserve">
-    <value>Login</value>
+  <data name="getStarted" xml:space="preserve">
+    <value>Get Started</value>
   </data>
   <data name="ForgotPassword" xml:space="preserve">
     <value>Forgot Password</value>
   </data>
-  <data name="Login" xml:space="preserve">
-    <value>Login</value>
+  <data name="login" xml:space="preserve">
+    <value>Log in</value>
   </data>
   <data name="InvalidLoginCredentials" xml:space="preserve">
     <value>Invalid Login Credentials</value>
@@ -377,5 +377,116 @@
   </data>
   <data name="PlanRequests" xml:space="preserve">
     <value>Plan Requests </value>
+  </data>
+  <data name="digitalMenuPlatform" xml:space="preserve">
+    <value>Digital menu platform for establishments. Create and share menus via QR codes.</value>
+  </data>
+  <data name="product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="pricing" xml:space="preserve">
+    <value>Pricing</value>
+  </data>
+  <data name="faq" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="about" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="careers" xml:space="preserve">
+    <value>Careers</value>
+  </data>
+  <data name="legal" xml:space="preserve">
+    <value>Legal</value>
+  </data>
+  <data name="terms" xml:space="preserve">
+    <value>Terms</value>
+  </data>
+  <data name="privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="cookies" xml:space="preserve">
+    <value>Cookies</value>
+  </data>
+  <data name="allRightsReserved" xml:space="preserve">
+    <value>All rights reserved.</value>
+  </data>
+  <data name="adminDashboard" xml:space="preserve">
+    <value>Admin Dashboard</value>
+  </data>
+  <data name="userDashboard" xml:space="preserve">
+    <value>User Dashboard</value>
+  </data>
+  <data name="signup" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="heroHeading" xml:space="preserve">
+    <value>Digital Menus for Modern Establishments</value>
+  </data>
+  <data name="featuresSectionHeading" xml:space="preserve">
+    <value>Features Designed for Establishments</value>
+  </data>
+  <data name="featuresSectionDescription" xml:space="preserve">
+    <value>Everything you need to create and manage digital menus for your establishment.</value>
+  </data>
+  <data name="featureQrCodeHeading" xml:space="preserve">
+    <value>QR Code Menus</value>
+  </data>
+  <data name="featureQrCodeDescription" xml:space="preserve">
+    <value>Generate unique QR codes for each table that link directly to your digital menu.</value>
+  </data>
+  <data name="featureMenuManagementHeading" xml:space="preserve">
+    <value>Menu Management</value>
+  </data>
+  <data name="featureMenuManagementDescription" xml:space="preserve">
+    <value>Create and update your menu items, categories, and prices with ease.</value>
+  </data>
+  <data name="featureMobileOptimizedHeading" xml:space="preserve">
+    <value>Mobile Optimized</value>
+  </data>
+  <data name="featureMobileOptimizedDescription" xml:space="preserve">
+    <value>Beautiful menus that look great on any device, especially smartphones.</value>
+  </data>
+  <data name="pricingSectionHeading" xml:space="preserve">
+    <value>Simple, Transparent Pricing</value>
+  </data>
+  <data name="pricingSectionDescription" xml:space="preserve">
+    <value>Choose the plan that works best for your establishment.</value>
+  </data>
+  <data name="ctaSectionHeading" xml:space="preserve">
+    <value>Ready to Transform Your Establishment?</value>
+  </data>
+  <data name="ctaSectionDescription" xml:space="preserve">
+    <value>Join many of establishments already using TableTap to enhance their dining experience.</value>
+  </data>
+  <data name="featureQRCodeItem1" xml:space="preserve">
+    <value>Unlimited QR code generation</value>
+  </data>
+  <data name="featureQRCodeItem2" xml:space="preserve">
+    <value>Category-specific codes</value>
+  </data>
+  <data name="featureQRCodeItem3" xml:space="preserve">
+    <value>Printable high-resolution files</value>
+  </data>
+  <data name="featureMenuItem1" xml:space="preserve">
+    <value>Photo uploads for each dish</value>
+  </data>
+  <data name="featureMenuItem2" xml:space="preserve">
+    <value>Recipe or ingredient details for each item</value>
+  </data>
+  <data name="featureMobileItem1" xml:space="preserve">
+    <value>Responsive design</value>
+  </data>
+  <data name="featureMobileItem2" xml:space="preserve">
+    <value>Fast loading times</value>
+  </data>
+  <data name="featureMobileItem3" xml:space="preserve">
+    <value>No app download required</value>
   </data>
 </root>

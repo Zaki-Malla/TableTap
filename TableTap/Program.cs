@@ -52,55 +52,6 @@ using (var scope = app.Services.CreateScope())
     var context = scope.ServiceProvider.GetRequiredService<TTContext>();
     context.Database.Migrate();
 }
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-
-    try
-    {
-        var roleManager = services.GetRequiredService<RoleManager<RoleModel>>();
-        var userManager = services.GetRequiredService<UserManager<UserModel>>();
-
-        var requiredRoles = new[] { "Admin", "User" };
-        foreach (var role in requiredRoles)
-        {
-            if (!await roleManager.RoleExistsAsync(role))
-            {
-                await roleManager.CreateAsync(new RoleModel(role));
-            }
-        }
-
-        var AdminRoleExists = await userManager.GetUsersInRoleAsync("Admin");
-
-        if (!AdminRoleExists.Any())
-        {
-            var defaultAdmin = new UserModel
-            {
-                FullName = "Zaki Malla",
-                UserName = "admin@admin.com",
-                Email = "admin@admin.com",
-                EmailConfirmed = true
-            };
-
-            var result = await userManager.CreateAsync(defaultAdmin, "Zaki.123");
-            if (result.Succeeded)
-            {
-                await userManager.AddToRoleAsync(defaultAdmin, "Admin");
-            }
-            else
-            {
-                foreach (var error in result.Errors)
-                {
-                    Console.WriteLine($"Error: {error.Description}");
-                }
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Initialization error: {ex.Message}");
-    }
-}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
