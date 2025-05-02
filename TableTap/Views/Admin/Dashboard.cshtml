@@ -1,111 +1,11 @@
 ﻿@{
     ViewData["Title"] = SharedResource.AdminDashboard_Title + " || TableTap";
 }
-<style>
-    .admin-badge {
-        font-size: 0.75rem;
-        background-color: var(--primary);
-        color: var(--primary-foreground);
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.375rem;
-        margin-left: 0.5rem;
-        font-weight: 500;
-    }
-</style>
-@await Html.PartialAsync("_LandingHeader")
+
 <body>
     <div class="dashboard-wrapper">
-        <!-- Admin Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <a href="index.html">
-                    <span class="admin-badge">@SharedResource.Admin</span>
-                </a>
-                <button class="sidebar-toggle" aria-label="Toggle Sidebar">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            <nav class="sidebar-nav">
-                <ul>
-                    <li class="active">
-                        <a href="admin.html">
-                            <i class="fas fa-home"></i>
-                            <span>@SharedResource.Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-restaurants.html">
-                            <i class="fas fa-building"></i>
-                            <span>@SharedResource.Establishment</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-users.html">
-                            <i class="fas fa-users"></i>
-                            <span>@SharedResource.Users</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-subscriptions.html">
-                            <i class="fas fa-credit-card"></i>
-                            <span>@SharedResource.Subscriptions</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-payment-requests.html">
-                            <i class="fas fa-money-bill"></i>
-                            <span>@SharedResource.PaymentRequests</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-analytics.html">
-                            <i class="fas fa-chart-bar"></i>
-                            <span>@SharedResource.Analytics</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-cities.html">
-                            <i class="fas fa-globe"></i>
-                            <span>@SharedResource.Cities</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-payment-methods.html">
-                            <i class="fas fa-wallet"></i>
-                            <span>@SharedResource.PaymentMethods</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-settings.html">
-                            <i class="fas fa-cog"></i>
-                            <span>@SharedResource.Settings</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-security.html">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>@SharedResource.Security</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="sidebar-footer">
-                <div class="user-info">
-                    <div class="user-avatar">
-                        <img src="https://placehold.co/100" alt="Admin">
-                    </div>
-                    <div class="user-details">
-                        <span class="user-name">@SharedResource.AdminUser</span>
-                        <span class="user-email">@SharedResource.AdminEmail</span>
-                    </div>
-                    <button class="user-settings" aria-label="User settings">
-                        <i class="fas fa-cog"></i>
-                    </button>
-                </div>
-            </div>
-        </aside>
+        @await Html.PartialAsync("_AdminSidebar")
 
-        <!-- Main Content -->
         <main class="dashboard-main">
             <div class="dashboard-header">
                 <h1>@SharedResource.AdminDashboard_Header</h1>
@@ -211,28 +111,5 @@
         </main>
     </div>
 
-    <script>
-        // Sidebar toggle
-        const sidebarToggle = document.querySelector('.sidebar-toggle');
-        const dashboardWrapper = document.querySelector('.dashboard-wrapper');
 
-        sidebarToggle.addEventListener('click', () => {
-          dashboardWrapper.classList.toggle('sidebar-collapsed');
-        });
-
-        // Tab switching
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-
-            button.classList.add('active');
-            const tabId = button.getAttribute('data-tab');
-            document.getElementById(tabId).classList.add('active');
-          });
-        });
-    </script>
 </body>

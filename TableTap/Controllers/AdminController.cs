@@ -75,5 +75,11 @@ namespace TableTap.Controllers
             return View();
         }
 
+        public async Task<IActionResult> PaymentMethods()
+        {
+
+            return View();
+        }
+
     }
 }

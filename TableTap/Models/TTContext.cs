@@ -27,8 +27,8 @@ namespace TableTap.Models
         public virtual DbSet<MenuModel> TbMenus { get; set; }
         public virtual DbSet<CategoryModel> TbCategories { get; set; }
         public virtual DbSet<MenuItemModel> TbMenuItems { get; set; }
-
-
+        public virtual DbSet<PaymentRequestModel> TbPaymentRequest { get; set; }
+        public virtual DbSet<PaymentMethodModel> TbPaymentMethod { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -94,6 +94,19 @@ namespace TableTap.Models
                 .HasForeignKey(mi => mi.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            //8. EstablishmentModel → PaymentRequestModel (One-to-Many)
+            modelBuilder.Entity<EstablishmentModel>()
+                .HasMany(e => e.PaymentRequests)
+                .WithOne(pr => pr.Establishment)
+                .HasForeignKey(pr => pr.EstablishmentId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            //9. PaymentMethodModel → PaymentRequestModel (One-to-Many)
+            modelBuilder.Entity<PaymentMethodModel>()
+                .HasMany(pm => pm.PaymentRequests)
+                .WithOne(pr => pr.PaymentMethod)
+                .HasForeignKey(pr => pr.PaymentMethodId)
+                .OnDelete(DeleteBehavior.Restrict);
 
         }
 

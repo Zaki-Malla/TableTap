@@ -17,6 +17,7 @@ namespace TableTap.Models
         public UserModel User { get; set; }
         public virtual List<SubscriptionModel> Subscriptions { get; set; }
         public virtual List<MenuModel> Menus { get; set; }
+        public virtual List<PaymentRequestModel> PaymentRequests { get; set; }
 
     }
 }
