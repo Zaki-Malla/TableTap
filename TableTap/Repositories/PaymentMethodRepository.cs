@@ -49,5 +49,16 @@ namespace TableTap.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task TogglePaymentMethodStatusAsync(int id)
+        {
+            var method = await _context.TbPaymentMethod.FindAsync(id);
+            if (method != null)
+            {
+                method.IsActive = !method.IsActive;
+                _context.TbPaymentMethod.Update(method);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

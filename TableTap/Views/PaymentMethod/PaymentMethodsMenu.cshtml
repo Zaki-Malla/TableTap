@@ -1,0 +1,361 @@
+﻿@model List<PaymentMethodModel>
+@{
+    ViewData["Title"] = SharedResource.manage_payment_methods + " || TableTap";
+}
+<style>
+    .modal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    .modal-content {
+        transform: scale(0.95);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .modal.active .modal-content {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .status-badge.inactive {
+        background-color: #ffe5e5;
+        color: #c0392b;
+        border: 1px solid #e74c3c;
+    }
+
+    .payment-badge {
+        display: inline-block;
+        padding: 6px 12px;
+        background-color: #f0f0f0;
+        color: #333;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .payment-badge:hover {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+    .payment-method-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .payment-method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+    .admin-actions .btn-primary {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .admin-actions .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+    #typeFilter {
+        background-color: var(--select-bg);
+        color: var(--select-text);
+        border: 1px solid var(--select-border);
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    :root {
+        --select-bg: #ffffff;
+        --select-text: #333;
+        --select-border: #ccc;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        : root
+
+    {
+        --select-bg: #2c2c2c;
+        --select-text: #f0f0f0;
+        --select-border: #555;
+    }
+
+    }
+</style>
+
+<body>
+    <div class="dashboard-wrapper">
+        @await Html.PartialAsync("_AdminSidebar")
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1>@SharedResource.manage_payment_methods</h1>
+                <p>@SharedResource.configure_available_methods</p>
+            </div>
+
+            <div class="admin-actions">
+                <div class="search-filter">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="@SharedResource.search_payment_methods">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-box">
+                        <select id="typeFilter">
+                            <option value="">@SharedResource.all_types_option</option>
+                            <option value="cash">@SharedResource.cash</option>
+                            <option value="BankTransfer">@SharedResource.BankTransfer</option>
+                            <option value="CreditCard">@SharedResource.CreditCard</option>
+                            <option value="DebitCard">@SharedResource.DebitCard</option>
+                            <option value="MobileWallet">@SharedResource.MobileWallet</option>
+                            <option value="PayPal">@SharedResource.PayPal</option>
+                            <option value="Stripe">@SharedResource.Stripe</option>
+                            <option value="Cryptocurrency">@SharedResource.Cryptocurrency</option>
+                            <option value="Payeer">@SharedResource.Payeer</option>
+                            <option value="Other">@SharedResource.Other</option>
+                        </select>
+                    </div>
+
+                </div>
+                <button class="btn btn-primary"><i class="fas fa-plus"></i>@SharedResource.add_payment_method_button</button>
+            </div>
+
+            <div class="payment-methods-grid">
+                @foreach (var method in Model)
+                {
+                    var iconClass = method.Type switch
+                    {
+                        "cash" => "fas fa-money-bill",
+                        "BankTransfer" => "fas fa-university",
+                        "CreditCard" or "DebitCard" => "fas fa-credit-card",
+                        "MobileWallet" => "fas fa-wallet",
+                        "PayPal" => "fab fa-paypal",
+                        "Stripe" => "fab fa-stripe",
+                        "Cryptocurrency" => "fab fa-bitcoin",
+                        _ => "fas fa-question-circle"
+                    };
+
+                    var statusClass = method.IsActive == true ? "status-badge active" : "status-badge inactive";
+                    var statusText = method.IsActive == true ? @SharedResource.active_status : @SharedResource.inactive_status;
+
+                    <div class="card payment-method-card"
+                         data-name="@method.Name.ToLower()"
+                         data-type="@method.Type.ToLower()">
+                        <div class="card-header">
+                            <div class="payment-method-icon">
+                                <i class="@iconClass"></i>
+                            </div>
+                            <h3>@method.Name</h3>
+                            <span class="@statusClass">@statusText</span>
+                        </div>
+                        <div class="card-content">
+                            <p>@method.Description</p>
+
+                            <ul class="payment-method-list">
+                                <li>
+                                    <span class="payment-badge">
+                                        @SharedResource.ResourceManager.GetString(method.Type, System.Globalization.CultureInfo.CurrentUICulture)
+                                    </span>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="card-footer">
+                            <button class="btn btn-outline btn-sm edit-button"
+                                    data-id="@method.Id"
+                                    data-name="@method.Name"
+                                    data-type="@method.Type"
+                                    data-active="@method.IsActive"
+                                    data-description="@method.Description">
+                                @SharedResource.edit
+                            </button>
+                            <form asp-action="TogglePaymentMethodStatus" asp-controller="PaymentMethod" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@method.Id" />
+                                <button type="submit"
+                                        class="btn btn-outline btn-sm @(method.IsActive ? "btn-danger" : "btn-success")">
+                                    @(method.IsActive ? SharedResource.Disable : SharedResource.Enable)
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </main>
+    </div>
+
+    <div class="modal" id="paymentMethodModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>@SharedResource.add_payment_method_button</h2>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="PaymentMethod" asp-action="AddPaymentMethod" method="post" id="paymentMethodForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="MethodName">@SharedResource.method_name_label</label>
+                        <input type="text" id="MethodName" name="MethodName" class="form-control" placeholder="@SharedResource.enter_method_name_placeholder" required>
+                        @if (!string.IsNullOrEmpty(ViewData["MethodNameError"]?.ToString()))
+                        {
+                            <span class="error-text">@ViewData["MethodNameError"]</span>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <label for="Type">@SharedResource.type</label>
+                        <select id="Type" name="Type" class="form-control" required>
+                            <option value="">@SharedResource.select_type</option>
+                            <option value="cash">@SharedResource.cash</option>
+                            <option value="BankTransfer">@SharedResource.BankTransfer</option>
+                            <option value="CreditCard">@SharedResource.CreditCard</option>
+                            <option value="DebitCard">@SharedResource.DebitCard</option>
+                            <option value="MobileWallet">@SharedResource.MobileWallet</option>
+                            <option value="PayPal">@SharedResource.PayPal</option>
+                            <option value="Stripe">@SharedResource.Stripe</option>
+                            <option value="Cryptocurrency">@SharedResource.Cryptocurrency</option>
+                            <option value="Payeer">@SharedResource.Payeer</option>
+                            <option value="Other">@SharedResource.Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="IsActive">@SharedResource.Status</label>
+                        <select id="IsActive" name="IsActive" class="form-control">
+                            <option value="true">@SharedResource.active_status</option>
+                            <option value="false">@SharedResource.inactive_status</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Description">@SharedResource.Description</label>
+                        <textarea id="Description" name="Description" required class="form-control" placeholder="@SharedResource.enter_method_description_placeholder"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline modal-close">@SharedResource.cancel</button>
+                        <button type="submit" class="btn btn-primary">@SharedResource.save_method</button>
+                        <div id="formLoading" style="display: none; text-align: center; margin-top: 10px;">
+                            <i class="fas fa-spinner fa-spin"></i> @SharedResource.loading
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('paymentMethodModal');
+        const modalTitle = document.querySelector('.modal-header h2');
+        const modalClose = document.querySelector('.modal-close');
+        const cancelButton = document.querySelector('.modal-footer .btn-outline');
+        const addButton = document.querySelector('.admin-actions .btn-primary');
+        const form = document.getElementById('paymentMethodForm');
+        const loadingIndicator = document.getElementById('formLoading');
+
+        const editButtons = document.querySelectorAll('.edit-button');
+
+        function openModal() {
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        editButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = button.dataset.id;
+                const name = button.dataset.name;
+                const type = button.dataset.type;
+                const isActive = button.dataset.active === "True" ? "true" : "false";
+                const description = button.dataset.description;
+
+                modalTitle.textContent = @Html.Raw(Json.Serialize(SharedResource.edit_payment_method_button));
+
+                document.getElementById('paymentMethodForm').action = `/PaymentMethod/EditPaymentMethod/${id}`;
+                document.getElementById('MethodName').value = name;
+                document.getElementById('Type').value = type;
+                document.getElementById('IsActive').value = isActive;
+                document.getElementById('Description').value = description;
+
+                openModal();
+            });
+        });
+
+        addButton.addEventListener('click', () => {
+            modalTitle.textContent = @Html.Raw(Json.Serialize(SharedResource.add_payment_method_button));
+
+            document.getElementById('paymentMethodForm').action = "/PaymentMethod/AddPaymentMethod";
+            document.getElementById('MethodName').value = "";
+            document.getElementById('Type').value = "";
+            document.getElementById('IsActive').value = "true";
+            document.getElementById('Description').value = "";
+
+            openModal();
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        cancelButton.addEventListener('click', closeModal);
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        form.addEventListener('submit', () => {
+            loadingIndicator.style.display = 'inline-block';
+        });
+    </script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const typeFilter = document.getElementById('typeFilter');
+        const paymentCards = document.querySelectorAll('.payment-method-card');
+
+        function filterMethods() {
+            const searchValue = searchInput.value.toLowerCase().trim();
+            const selectedType = typeFilter.value.toLowerCase();
+
+            paymentCards.forEach(card => {
+                const name = card.dataset.name;
+                const type = card.dataset.type;
+
+                const matchesName = name.includes(searchValue);
+                const matchesType = selectedType === '' || type === selectedType;
+
+                if (matchesName && matchesType) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', filterMethods);
+        typeFilter.addEventListener('change', filterMethods);
+    </script>
+
+
+</body>

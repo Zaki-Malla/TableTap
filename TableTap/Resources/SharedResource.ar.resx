@@ -684,4 +684,19 @@
   <data name="Other" xml:space="preserve">
     <value>أخرى</value>
   </data>
+  <data name="edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>الغاء التفعيل</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>تفعيل</value>
+  </data>
+  <data name="edit_payment_method_button" xml:space="preserve">
+    <value>تعديل طريقة دفع</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>يتم التحميل الآن</value>
+  </data>
 </root>

@@ -13,13 +13,11 @@ namespace TableTap.Controllers
     {
         private readonly SignInManager<UserModel> _signInManager;
         private readonly UserManager<UserModel> _userManager;
-        private readonly IPaymentMethodRepository _paymentMethodRepository;
 
         public AdminController(SignInManager<UserModel> signInManager, UserManager<UserModel> userManager, IPaymentMethodRepository paymentMethodRepository)
         {
             _signInManager = signInManager;
             _userManager = userManager;
-            _paymentMethodRepository = paymentMethodRepository;
         }
         public IActionResult Dashboard()
         {
@@ -78,31 +76,5 @@ namespace TableTap.Controllers
         {
             return View();
         }
-
-        public async Task<IActionResult> PaymentMethods()
-        {
-            return View(await _paymentMethodRepository.GetAllPaymentMethodsAsync());
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> AddPaymentMethod(PaymentMethodViewModel model)
-        {
-            if (!ModelState.IsValid)
-                return View("PaymentMethods", model);
-
-            var paymentMethod = new PaymentMethodModel
-            {
-                Name = model.MethodName,
-                Type = model.Type,
-                IsActive = model.IsActive,
-                Description = model.Description
-            };
-
-            await _paymentMethodRepository.AddPaymentMethodAsync(paymentMethod);
-
-            return RedirectToAction("PaymentMethods");
-        }
-
-
     }
 }

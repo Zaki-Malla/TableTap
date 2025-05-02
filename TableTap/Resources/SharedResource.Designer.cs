@@ -592,6 +592,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disable.
+        /// </summary>
+        public static string Disable {
+            get {
+                return ResourceManager.GetString("Disable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Drinks.
         /// </summary>
         public static string Drinks {
@@ -628,6 +637,24 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string edit {
+            get {
+                return ResourceManager.GetString("edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Payment Method.
+        /// </summary>
+        public static string edit_payment_method_button {
+            get {
+                return ResourceManager.GetString("edit_payment_method_button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email.
         /// </summary>
         public static string EmailLabel {
@@ -642,6 +669,15 @@ namespace TableTap.Resources {
         public static string emailUs {
             get {
                 return ResourceManager.GetString("emailUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable.
+        /// </summary>
+        public static string Enable {
+            get {
+                return ResourceManager.GetString("Enable", resourceCulture);
             }
         }
         
@@ -1092,6 +1128,15 @@ namespace TableTap.Resources {
         public static string light {
             get {
                 return ResourceManager.GetString("light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading.
+        /// </summary>
+        public static string loading {
+            get {
+                return ResourceManager.GetString("loading", resourceCulture);
             }
         }
         
