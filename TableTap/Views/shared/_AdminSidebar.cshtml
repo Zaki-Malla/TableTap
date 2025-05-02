@@ -12,6 +12,53 @@
         margin-right: 8px;
     }
 
+    .language-switcher {
+        margin-top: 15px;
+        position: relative;
+        text-align: center;
+    }
+
+    .language-btn {
+        background: none;
+        border: 1px solid #ccc;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .language-dropdown {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        z-index: 10;
+        padding: 0;
+        list-style: none;
+    }
+
+        .language-dropdown li a {
+            display: block;
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+        }
+
+            .language-dropdown li a:hover {
+                background-color: #f5f5f5;
+            }
+
 </style>
 
 <aside class="sidebar">
@@ -102,6 +149,21 @@
                 <i class="fas fa-cog"></i>
             </button>
         </div>
+        <div class="language-switcher">
+            <button class="language-btn" id="languageToggle">
+                @(CultureInfo.CurrentUICulture.Name.StartsWith("ar") ? "العربية" : "English")
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul class="language-dropdown" id="languageList">
+                <li>
+                    <a asp-controller="Language" asp-action="ChangeLanguage" asp-route-lang="en">English</a>
+                </li>
+                <li>
+                    <a asp-controller="Language" asp-action="ChangeLanguage" asp-route-lang="ar">العربية</a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </aside>
 
@@ -126,5 +188,19 @@
         const tabId = button.getAttribute('data-tab');
         document.getElementById(tabId).classList.add('active');
       });
+    });
+</script>
+
+<script>
+    const langBtn = document.getElementById('languageToggle');
+    const langList = document.getElementById('languageList');
+
+    langBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        langList.style.display = langList.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function () {
+        langList.style.display = 'none';
     });
 </script>

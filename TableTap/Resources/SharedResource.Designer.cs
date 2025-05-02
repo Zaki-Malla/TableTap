@@ -88,6 +88,24 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active.
+        /// </summary>
+        public static string active_status {
+            get {
+                return ResourceManager.GetString("active_status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Payment Method.
+        /// </summary>
+        public static string add_payment_method_button {
+            get {
+                return ResourceManager.GetString("add_payment_method_button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add Menu.
         /// </summary>
         public static string AddMenu_Button {
@@ -214,6 +232,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Types.
+        /// </summary>
+        public static string all_types_option {
+            get {
+                return ResourceManager.GetString("all_types_option", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All rights reserved..
         /// </summary>
         public static string allRightsReserved {
@@ -295,6 +322,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bank Transfer.
+        /// </summary>
+        public static string BankTransfer {
+            get {
+                return ResourceManager.GetString("BankTransfer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basic service at a small price with more expensive options for more customizations..
         /// </summary>
         public static string basicServiceAtSmallPrice {
@@ -304,11 +340,29 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string cancel {
+            get {
+                return ResourceManager.GetString("cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Careers.
         /// </summary>
         public static string careers {
             get {
                 return ResourceManager.GetString("careers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash.
+        /// </summary>
+        public static string cash {
+            get {
+                return ResourceManager.GetString("cash", resourceCulture);
             }
         }
         
@@ -367,6 +421,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Configure available payment methods for the platform..
+        /// </summary>
+        public static string configure_available_methods {
+            get {
+                return ResourceManager.GetString("configure_available_methods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact.
         /// </summary>
         public static string contact {
@@ -408,6 +471,24 @@ namespace TableTap.Resources {
         public static string createQR {
             get {
                 return ResourceManager.GetString("createQR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Credit Card.
+        /// </summary>
+        public static string CreditCard {
+            get {
+                return ResourceManager.GetString("CreditCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cryptocurrency.
+        /// </summary>
+        public static string Cryptocurrency {
+            get {
+                return ResourceManager.GetString("Cryptocurrency", resourceCulture);
             }
         }
         
@@ -480,6 +561,15 @@ namespace TableTap.Resources {
         public static string Dashboard {
             get {
                 return ResourceManager.GetString("Dashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debit Card.
+        /// </summary>
+        public static string DebitCard {
+            get {
+                return ResourceManager.GetString("DebitCard", resourceCulture);
             }
         }
         
@@ -561,6 +651,24 @@ namespace TableTap.Resources {
         public static string Enter_admin_email {
             get {
                 return ResourceManager.GetString("Enter_admin_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter payment method description.
+        /// </summary>
+        public static string enter_method_description_placeholder {
+            get {
+                return ResourceManager.GetString("enter_method_description_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter payment method name.
+        /// </summary>
+        public static string enter_method_name_placeholder {
+            get {
+                return ResourceManager.GetString("enter_method_name_placeholder", resourceCulture);
             }
         }
         
@@ -943,6 +1051,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Inactive.
+        /// </summary>
+        public static string inactive_status {
+            get {
+                return ResourceManager.GetString("inactive_status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid Login Credentials.
         /// </summary>
         public static string InvalidLoginCredentials {
@@ -988,6 +1105,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Manage Payment Methods.
+        /// </summary>
+        public static string manage_payment_methods {
+            get {
+                return ResourceManager.GetString("manage_payment_methods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Menu Name.
         /// </summary>
         public static string MenuName {
@@ -1002,6 +1128,24 @@ namespace TableTap.Resources {
         public static string MenuType {
             get {
                 return ResourceManager.GetString("MenuType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Method Name.
+        /// </summary>
+        public static string method_name_label {
+            get {
+                return ResourceManager.GetString("method_name_label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mobile Wallet.
+        /// </summary>
+        public static string MobileWallet {
+            get {
+                return ResourceManager.GetString("MobileWallet", resourceCulture);
             }
         }
         
@@ -1069,6 +1213,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        public static string Other {
+            get {
+                return ResourceManager.GetString("Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {
@@ -1087,6 +1240,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Payeer.
+        /// </summary>
+        public static string Payeer {
+            get {
+                return ResourceManager.GetString("Payeer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Payment Methods .
         /// </summary>
         public static string PaymentMethods {
@@ -1101,6 +1263,15 @@ namespace TableTap.Resources {
         public static string PaymentRequests {
             get {
                 return ResourceManager.GetString("PaymentRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PayPal.
+        /// </summary>
+        public static string PayPal {
+            get {
+                return ResourceManager.GetString("PayPal", resourceCulture);
             }
         }
         
@@ -1258,11 +1429,29 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save Payment Method.
+        /// </summary>
+        public static string save_method {
+            get {
+                return ResourceManager.GetString("save_method", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Say goodbye to repetitive printing and save your establishment the periodic costs of lists..
         /// </summary>
         public static string sayGoodbye {
             get {
                 return ResourceManager.GetString("sayGoodbye", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search payment methods....
+        /// </summary>
+        public static string search_payment_methods {
+            get {
+                return ResourceManager.GetString("search_payment_methods", resourceCulture);
             }
         }
         
@@ -1281,6 +1470,15 @@ namespace TableTap.Resources {
         public static string Security {
             get {
                 return ResourceManager.GetString("Security", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a type.
+        /// </summary>
+        public static string select_type {
+            get {
+                return ResourceManager.GetString("select_type", resourceCulture);
             }
         }
         
@@ -1393,6 +1591,15 @@ namespace TableTap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Stripe.
+        /// </summary>
+        public static string Stripe {
+            get {
+                return ResourceManager.GetString("Stripe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Subscriptions.
         /// </summary>
         public static string Subscriptions {
@@ -1488,6 +1695,15 @@ namespace TableTap.Resources {
         public static string TotalRequests {
             get {
                 return ResourceManager.GetString("TotalRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string type {
+            get {
+                return ResourceManager.GetString("type", resourceCulture);
             }
         }
         

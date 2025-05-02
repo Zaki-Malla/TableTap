@@ -612,4 +612,76 @@
   <data name="Stat_ActiveUsers" xml:space="preserve">
     <value>Active Users </value>
   </data>
+  <data name="manage_payment_methods" xml:space="preserve">
+    <value>Manage Payment Methods</value>
+  </data>
+  <data name="configure_available_methods" xml:space="preserve">
+    <value>Configure available payment methods for the platform.</value>
+  </data>
+  <data name="search_payment_methods" xml:space="preserve">
+    <value>Search payment methods...</value>
+  </data>
+  <data name="all_types_option" xml:space="preserve">
+    <value>All Types</value>
+  </data>
+  <data name="add_payment_method_button" xml:space="preserve">
+    <value>Add Payment Method</value>
+  </data>
+  <data name="method_name_label" xml:space="preserve">
+    <value>Method Name</value>
+  </data>
+  <data name="enter_method_name_placeholder" xml:space="preserve">
+    <value>Enter payment method name</value>
+  </data>
+  <data name="type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="active_status" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="inactive_status" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="enter_method_description_placeholder" xml:space="preserve">
+    <value>Enter payment method description</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="save_method" xml:space="preserve">
+    <value>Save Payment Method</value>
+  </data>
+  <data name="select_type" xml:space="preserve">
+    <value>Select a type</value>
+  </data>
+  <data name="cash" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>Bank Transfer</value>
+  </data>
+  <data name="CreditCard" xml:space="preserve">
+    <value>Credit Card</value>
+  </data>
+  <data name="DebitCard" xml:space="preserve">
+    <value>Debit Card</value>
+  </data>
+  <data name="MobileWallet" xml:space="preserve">
+    <value>Mobile Wallet</value>
+  </data>
+  <data name="PayPal" xml:space="preserve">
+    <value>PayPal</value>
+  </data>
+  <data name="Stripe" xml:space="preserve">
+    <value>Stripe</value>
+  </data>
+  <data name="Cryptocurrency" xml:space="preserve">
+    <value>Cryptocurrency</value>
+  </data>
+  <data name="Payeer" xml:space="preserve">
+    <value>Payeer</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
 </root>

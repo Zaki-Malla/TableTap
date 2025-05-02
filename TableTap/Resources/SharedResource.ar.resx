@@ -316,7 +316,7 @@
     <value>نوع القائمة</value>
   </data>
   <data name="SelectOption" xml:space="preserve">
-    <value>اختر نوع</value>
+    <value>اختر خيار</value>
   </data>
   <data name="Food" xml:space="preserve">
     <value>طعام</value>
@@ -611,5 +611,77 @@
   </data>
   <data name="Stat_ActiveUsers" xml:space="preserve">
     <value>المستخدمون النشطون</value>
+  </data>
+  <data name="manage_payment_methods" xml:space="preserve">
+    <value>إدارة طرق الدفع</value>
+  </data>
+  <data name="configure_available_methods" xml:space="preserve">
+    <value>قم بتكوين طرق الدفع المتاحة للمنصة.</value>
+  </data>
+  <data name="search_payment_methods" xml:space="preserve">
+    <value>ابحث عن طرق الدفع...</value>
+  </data>
+  <data name="all_types_option" xml:space="preserve">
+    <value>جميع الأنواع</value>
+  </data>
+  <data name="add_payment_method_button" xml:space="preserve">
+    <value>إضافة طريقة دفع</value>
+  </data>
+  <data name="method_name_label" xml:space="preserve">
+    <value>اسم الطريقة</value>
+  </data>
+  <data name="enter_method_name_placeholder" xml:space="preserve">
+    <value>أدخل اسم طريقة الدفع</value>
+  </data>
+  <data name="type" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="active_status" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="inactive_status" xml:space="preserve">
+    <value>غير فعال</value>
+  </data>
+  <data name="enter_method_description_placeholder" xml:space="preserve">
+    <value>أدخل وصف طريقة الدفع</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="save_method" xml:space="preserve">
+    <value>حفظ طريقة الدفع</value>
+  </data>
+  <data name="select_type" xml:space="preserve">
+    <value>اختر النوع</value>
+  </data>
+  <data name="cash" xml:space="preserve">
+    <value>نقدًا</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>تحويل بنكي</value>
+  </data>
+  <data name="CreditCard" xml:space="preserve">
+    <value>بطاقة ائتمان</value>
+  </data>
+  <data name="DebitCard" xml:space="preserve">
+    <value>بطاقة خصم مباشر</value>
+  </data>
+  <data name="MobileWallet" xml:space="preserve">
+    <value>محفظة إلكترونية</value>
+  </data>
+  <data name="PayPal" xml:space="preserve">
+    <value>باي بال</value>
+  </data>
+  <data name="Stripe" xml:space="preserve">
+    <value>سترايب</value>
+  </data>
+  <data name="Cryptocurrency" xml:space="preserve">
+    <value>عملة رقمية</value>
+  </data>
+  <data name="Payeer" xml:space="preserve">
+    <value>بايير</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>أخرى</value>
   </data>
 </root>
