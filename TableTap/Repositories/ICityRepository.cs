@@ -13,5 +13,6 @@ namespace TableTap.Repositories
         Task UpdateCityAsync(CityModel city);
 
         Task DeleteCityAsync(int id);
+        Task ToggleCityStatusAsync(int id);
     }
 }

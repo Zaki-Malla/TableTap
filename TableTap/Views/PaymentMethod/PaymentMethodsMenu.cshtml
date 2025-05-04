@@ -329,33 +329,33 @@
             loadingIndicator.style.display = 'inline-block';
         });
     </script>
-    <script>
-        const searchInput = document.getElementById('searchInput');
-        const typeFilter = document.getElementById('typeFilter');
-        const paymentCards = document.querySelectorAll('.payment-method-card');
+        <script>
+            const searchInput = document.getElementById('searchInput');
+            const typeFilter = document.getElementById('typeFilter');
+            const paymentCards = document.querySelectorAll('.payment-method-card');
 
-        function filterMethods() {
-            const searchValue = searchInput.value.toLowerCase().trim();
-            const selectedType = typeFilter.value.toLowerCase();
+            function filterMethods() {
+                const searchValue = searchInput.value.toLowerCase().trim();
+                const selectedType = typeFilter.value.toLowerCase();
 
-            paymentCards.forEach(card => {
-                const name = card.dataset.name;
-                const type = card.dataset.type;
+                paymentCards.forEach(card => {
+                    const name = card.dataset.name;
+                    const type = card.dataset.type;
 
-                const matchesName = name.includes(searchValue);
-                const matchesType = selectedType === '' || type === selectedType;
+                    const matchesName = name.includes(searchValue);
+                    const matchesType = selectedType === '' || type === selectedType;
 
-                if (matchesName && matchesType) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
+                    if (matchesName && matchesType) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
 
-        searchInput.addEventListener('input', filterMethods);
-        typeFilter.addEventListener('change', filterMethods);
-    </script>
+            searchInput.addEventListener('input', filterMethods);
+            typeFilter.addEventListener('change', filterMethods);
+        </script>
 
 
 </body>

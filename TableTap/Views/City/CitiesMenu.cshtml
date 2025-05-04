@@ -1,0 +1,280 @@
+﻿@model List<CityModel>
+@{
+    ViewData["Title"] = " || TableTap";
+}
+
+<style>
+    .admin-table tbody tr {
+        transition: background-color 0.3s ease;
+    }
+
+        .admin-table tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+            cursor: pointer;
+        }
+
+    .status-badge {
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 0.85em;
+        font-weight: 500;
+    }
+
+        .status-badge.active {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.inactive {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+</style>
+<style>
+    th.actions-header,
+    td.actions {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .actions-content {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .action-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .edit-btn i {
+        color: #007bff;
+    }
+
+    .delete-btn i {
+        color: #dc3545;
+    }
+    .actions-column {
+        width: 80px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .action-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .filter-box select {
+        padding: 0.5rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.375rem;
+        background-color: #fff;
+        color: #333;
+        font-size: 0.875rem;
+    }
+</style>
+
+
+<body>
+    <div class="dashboard-wrapper">
+        @await Html.PartialAsync("_AdminSidebar")
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1>Manage Cities</h1>
+                <p>Add, edit, and remove supported cities.</p>
+            </div>
+
+            <div class="admin-actions">
+                <div class="search-filter">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search cities...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="filter-box">
+                        <select id="statusFilter">
+                            <option value="">All</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary"><i class="fas fa-plus"></i> Add New City</button>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center;">City Name</th>
+                                    <th style="text-align: center;">Establishments</th>
+                                    <th style="text-align: center;">Status</th>
+                                    <th class="actions-column">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cityTableBody">
+                                @foreach (var city in Model)
+                                {
+                                    <tr>
+                                        <td style="text-align: center;">@city.Name</td>
+                                        <td style="text-align: center;">@(city.Establishments?.Count ?? 0)</td>
+                                        <td style="text-align: center;" class="status-cell" data-status="@(city.IsActive ? "active" : "inactive")">
+                                            <span class="status-badge @(city.IsActive ? "active" : "inactive")">
+                                                @(city.IsActive ? "Active" : "Inactive")
+                                            </span>
+                                        </td>
+                                        <td class="actions-column">
+                                            <div class="action-wrapper">
+                                                <form asp-action="ToggleCityStatus" asp-route-id="@city.Id" method="post" style="display:inline;">
+                                                    <button type="submit" class="action-btn delete-btn">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                                <button class="action-btn edit-btn" data-id="@city.Id" data-name="@city.Name" data-status="@city.IsActive">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="cityModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Add New City</h2>
+                        <button class="modal-close"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-action="AddCity" asp-controller="City" method="post" class="admin-form" id="cityForm">
+                            <input type="hidden" name="Id" id="city-id" />
+                            <div class="form-group">
+                                <label for="city-name">City Name</label>
+                                <input type="text" name="Name" id="city-name" placeholder="Enter city name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city-status">Status</label>
+                                <select name="IsActive" id="city-status">
+                                    <option value="true">Active</option>
+                                    <option value="false">Inactive</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-outline" type="button">Cancel</button>
+                                <button type="submit" class="btn btn-primary" form="cityForm">Save City</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const dashboardWrapper = document.querySelector('.dashboard-wrapper');
+            const editButtons = document.querySelectorAll('.edit-btn');
+            const addButton = document.querySelector('.btn-primary');
+            const modal = document.getElementById('cityModal');
+            const modalClose = document.querySelector('.modal-close');
+            const cancelButton = document.querySelector('.modal-footer .btn-outline');
+            const cityForm = document.getElementById('cityForm');
+
+            if (sidebarToggle && dashboardWrapper) {
+                sidebarToggle.addEventListener('click', () => {
+                    dashboardWrapper.classList.toggle('sidebar-collapsed');
+                });
+            }
+
+            function openModal() {
+                modal.classList.add('active');
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+            }
+
+            editButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const id = button.getAttribute('data-id');
+                    const name = button.getAttribute('data-name');
+                    const isActive = button.getAttribute('data-status') === 'True';
+
+                    document.getElementById('city-id').value = id;
+                    document.getElementById('city-name').value = name;
+                    document.getElementById('city-status').value = isActive;
+
+                    cityForm.setAttribute('action', `/City/EditCity/${id}`);
+
+                    openModal();
+                });
+            });
+
+            if (addButton) {
+                addButton.addEventListener('click', () => {
+                    document.getElementById('city-id').value = '';
+                    document.getElementById('city-name').value = '';
+                    document.getElementById('city-status').value = 'true';
+
+                    cityForm.setAttribute('action', '/City/AddCity');
+
+                    openModal();
+                });
+            }
+
+            if (modalClose) modalClose.addEventListener('click', closeModal);
+            if (cancelButton) cancelButton.addEventListener('click', closeModal);
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const statusFilter = document.getElementById('statusFilter');
+            const cityRows = document.querySelectorAll('#cityTableBody tr');
+
+            function filterCities() {
+                const searchValue = searchInput.value.toLowerCase().trim();
+                const statusValue = statusFilter.value; 
+
+                cityRows.forEach(row => {
+                    const name = row.children[0].textContent.toLowerCase();
+                    const statusCell = row.querySelector('.status-cell');
+                    const status = statusCell.getAttribute('data-status');
+
+                    const matchesName = name.includes(searchValue);
+                    const matchesStatus = statusValue === '' || status === statusValue;
+
+                    row.style.display = (matchesName && matchesStatus) ? '' : 'none';
+                });
+            }
+
+            searchInput.addEventListener('input', filterCities);
+            statusFilter.addEventListener('change', filterCities);
+        });
+    </script>
+
+
+</body>

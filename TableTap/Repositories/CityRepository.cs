@@ -47,5 +47,15 @@ namespace TableTap.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task ToggleCityStatusAsync(int id)
+        {
+            var city = await _context.TbCity.FindAsync(id);
+            if (city != null)
+            {
+                city.IsActive = !city.IsActive;
+                _context.TbCity.Update(city);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }
