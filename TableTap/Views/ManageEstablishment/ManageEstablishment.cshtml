@@ -1,4 +1,5 @@
-﻿@*
+﻿@model ManageEstablishmentViewModel
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -37,7 +38,7 @@
 <body>
     <div class="dashboard-wrapper">
         @await Html.PartialAsync("_AdminSidebar")
-    <!-- Main Content -->
+        <!-- Main Content -->
         <main class="dashboard-main">
             <div class="dashboard-header">
                 <h1>Manage Restaurants</h1>
@@ -75,140 +76,184 @@
                             <thead>
                                 <tr>
                                     <th>Restaurant</th>
-                                    <th>Owner</th>
                                     <th>Location</th>
                                     <th>Plan</th>
-                                    <th>Status</th>
-                                    <th>QR Codes</th>
-                                    <th>Menu Views</th>
+                                    @* <th>Status</th> *@
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-
-                                <tr class="data-row">
-                                    <td>
-                                        <div class="restaurant-info">
-                                            <img src="https://placehold.co/50" alt="Restaurant" class="restaurant-img">
-                                            <div>
-                                                <div class="restaurant-name">Pasta Paradise</div>
-                                                <div class="restaurant-id">ID: #12345</div>
+                                  @for(int i=0; i<Model.Establishments.Count; i++){
+                                    <tr class="data-row">
+                                        <td>
+                                            <div class="restaurant-info">
+                                                <img src="@(string.IsNullOrEmpty(Model.Establishments[i].ImagePath.ToString()) ? "/images/default.png" : Model.Establishments[i].ImagePath)"
+                                                     alt="@Model.Establishments[i].Name" width="50" height="50">
+                                                <div>
+                                                    <div class="restaurant-name">@Model.Establishments[i].Name</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>John Smith</td>
-                                    <td>New York, US</td>
-                                    <td><span class="plan-badge professional">Professional</span></td>
-                                    <td><span class="status-badge active">Active</span></td>
-                                    <td>24</td>
-                                    <td>1,248</td>
-                                    <td class="actions">
-                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
-                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
-                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="data-row">
-                                    <td>
-                                        <div class="restaurant-info">
-                                            <img src="https://placehold.co/50" alt="Restaurant" class="restaurant-img">
-                                            <div>
-                                                <div class="restaurant-name">Burger Bistro</div>
-                                                <div class="restaurant-id">ID: #12346</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>Sarah Johnson</td>
-                                    <td>Los Angeles, US</td>
-                                    <td><span class="plan-badge starter">Starter</span></td>
-                                    <td><span class="status-badge active">Active</span></td>
-                                    <td>12</td>
-                                    <td>876</td>
-                                    <td class="actions">
-                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
-                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
-                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="data-row">
-                                    <td>
-                                        <div class="restaurant-info">
-                                            <img src="https://placehold.co/50" alt="Restaurant" class="restaurant-img">
-                                            <div>
-                                                <div class="restaurant-name">Sushi Supreme</div>
-                                                <div class="restaurant-id">ID: #12347</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>David Lee</td>
-                                    <td>Tokyo, JP</td>
-                                    <td><span class="plan-badge enterprise">Enterprise</span></td>
-                                    <td><span class="status-badge active">Active</span></td>
-                                    <td>48</td>
-                                    <td>3,542</td>
-                                    <td class="actions">
-                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
-                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
-                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="data-row">
-                                    <td>
-                                        <div class="restaurant-info">
-                                            <img src="https://placehold.co/50" alt="Restaurant" class="restaurant-img">
-                                            <div>
-                                                <div class="restaurant-name">Taco Time</div>
-                                                <div class="restaurant-id">ID: #12348</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>Maria Garcia</td>
-                                    <td>Mexico City, MX</td>
-                                    <td><span class="plan-badge professional">Professional</span></td>
-                                    <td><span class="status-badge pending">Pending</span></td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td class="actions">
-                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
-                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
-                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="data-row">
-                                    <td>
-                                        <div class="restaurant-info">
-                                            <img src="https://placehold.co/50" alt="Restaurant" class="restaurant-img">
-                                            <div>
-                                                <div class="restaurant-name">Pizza Palace</div>
-                                                <div class="restaurant-id">ID: #12349</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>Robert Wilson</td>
-                                    <td>Rome, IT</td>
-                                    <td><span class="plan-badge starter">Starter</span></td>
-                                    <td><span class="status-badge suspended">Suspended</span></td>
-                                    <td>8</td>
-                                    <td>432</td>
-                                    <td class="actions">
-                                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
-                                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
-                                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
+                                        </td>
+                                        <td>@Model.Establishments[i].CityId+ "," +@Model.Establishments[i].Address</td>
+                                        <td>@(string.IsNullOrEmpty(Model.Establishments[i].Subscriptions[i].Plan.Name) ? "Not registered to paln" : Model.Establishments[i].Subscriptions[i].Plan.Name)</td>
+                                       @*  <td>@()</td> *@
+                                       <td class="actions">
+                                            <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                     }
                             </tbody>
                         </table>
                     </div>
                     <div id="table-pagination" class="pagination">
                         <button id="prevPage" class="pagination-btn"><i class="fas fa-chevron-left"></i></button>
-                       
+
                         <button id="nextPage" class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
+
+            <div class="modal" id="restaurantModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="modalTitle">Add Restaurant</h2>
+                        <button class="modal-close"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-controller="ManageEstablishment" asp-action="AddEstablishment" method="post" enctype="multipart/form-data" id="restaurantForm" class="admin-form">
+                            <input type="hidden" name="Id" id="city-id" />
+                            <div class="form-group">
+                                <label for="restaurant-name">Restaurant Name</label>
+                                <input type="text" id="restaurant-name" name="Name" placeholder="Enter restaurant name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="restaurant-city">City</label>
+                                <select id="restaurant-city" name="CityId" class="form-control" required>
+                                    <option value="">Select a city</option>
+                                    @foreach (var city in Model.Cities)
+                                    {
+                                        <option value="@city.Id">@city.Name</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="restaurant-address">Address</label>
+                                <input type="text" id="restaurant-address" name="Address" placeholder="Enter address" required>
+                            </div>
+
+                            @*  <div class="form-group">
+                                <label for="restaurant-plan">Subscription Plan</label>
+                                <select id="restaurant-plan" name="Subscriptions" required>
+                                    <option value="">Select a plan</option>
+                                    <option value="Free">Free</option>
+                                    <option value="Basic">Basic</option>
+                                    <option value="Professional">Professional</option>
+                                    <option value="Enterprise">Enterprise</option>
+                                </select>
+                            </div> *@
+                            <div class="form-group">
+                                <label class="form-label">Establishment Image</label>
+                                <input type="file" name="Image">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-outline modal-close">Cancel</button>
+                                <button type="submit" form="restaurantForm" class="btn btn-primary">Save Restaurant</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+           @*  <div class="modal" id="paymentRequestModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Payment Request Details</h2>
+                        <button class="modal-close"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="request-details">
+                            <div class="detail-row">
+                                <div class="detail-label">Request ID:</div>
+                                <div class="detail-value">#PR-1234</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Restaurant:</div>
+                                <div class="detail-value">Pasta Paradise (#12345)</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Plan:</div>
+                                <div class="detail-value">Professional - Monthly</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Amount:</div>
+                                <div class="detail-value">$79.00</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Payment Method:</div>
+                                <div class="detail-value">Credit Card (Visa ending in 4242)</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Date Requested:</div>
+                                <div class="detail-value">May 1, 2023 at 10:24 AM</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Status:</div>
+                                <div class="detail-value"><span class="status-badge pending">Pending</span></div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Notes:</div>
+                                <div class="detail-value">Monthly subscription renewal for Professional plan.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline">Close</button>
+                        <button class="btn btn-danger">Reject</button>
+                        <button class="btn btn-primary">Approve</button>
+                    </div>
+                </div>
+            </div> *@
+
         </main>
     </div>
+    <script>
+        const editButtons = document.querySelectorAll('.card-footer .btn:first-child');
+        const addButton = document.querySelector('.admin-actions .btn-primary');
+        const modal = document.getElementById('restaurantModal');
+        const modalClose = document.querySelector('.modal-close');
+        const cancelButton = document.querySelector('.modal-footer .btn-outline');
+        const viewButtons = document.querySelectorAll('.view-btn');
+        // const modal1 = document.getElementById('paymentRequestModal');
 
+        function openModal() {
+          modal.classList.add('active');
+        }
+
+        function closeModal() {
+          modal.classList.remove('active');
+        }
+
+        editButtons.forEach(button => {
+          button.addEventListener('click', openModal);
+        });
+
+        viewButtons.forEach(button => {
+            button.addEventListener('click', openModal);
+        });
+
+        addButton.addEventListener('click', openModal);
+        modalClose.addEventListener('click', closeModal);
+        cancelButton.addEventListener('click', closeModal);
+
+
+        window.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+    </script>
     <script>
         // Sidebar toggle
         const sidebarToggle = document.querySelector('.sidebar-toggle');
@@ -297,5 +342,6 @@
         // Initial render
         showPage(currentPage);
     </script>
+
 
 </body>

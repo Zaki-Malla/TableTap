@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TableTap.Models;
+using TableTap.Models.HelperModels;
 
 namespace TableTap.Repositories
 {
